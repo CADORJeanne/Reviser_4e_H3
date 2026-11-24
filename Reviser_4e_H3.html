@@ -1,0 +1,1579 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Révisions 4e : la Révolution française et l'Empire (H3). Dates repères et définitions : flip cards, QCM, frise et interrogation blanche.">
+<meta name="theme-color" content="#1E3A8A">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Révise H3">
+<meta name="format-detection" content="telephone=no">
+<title>Réviser H3 Révolution et Empire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Même univers que les applis G1/G2 : boîte à fiches bristol. Couleurs des thèmes : bleu, rouge, or. */
+:root{
+  --paper:#E8EBEE; --card:#FFFFFF; --ink:#18202C; --ink-2:#4F5B6B; --line:#CBD3DC;
+  --rule:#C9DAEE; --margin:#E6A3A3; --accent:#1E3A8A; --accent-ink:#FFFFFF; --gold:#A86A0C;
+  --ok:#15803D; --mid:#B45309; --ko:#B91C1C; --shadow:rgba(24,32,44,.12);
+  --c-pol:#1D4ED8; --c-soc:#B42318; --c-eur:#A15C07; --k-dat:#7C3AED; --k-def:#0F766E;
+  --f-display:"Big Shoulders Display","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --f-body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#10151C; --card:#19212B; --ink:#E7EBF0; --ink-2:#9DA9B8; --line:#2C3746;
+  --rule:#22334A; --margin:#5C2E2E; --accent:#9DB7FF; --accent-ink:#0E1626; --gold:#E3B252;
+  --ok:#4ADE80; --mid:#FBBF24; --ko:#F87171; --shadow:rgba(0,0,0,.45);
+  --c-pol:#7EA6FF; --c-soc:#F87171; --c-eur:#F0B429; --k-dat:#B794F6; --k-def:#2DD4BF;
+  color-scheme:dark}}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{min-height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:860px;margin:0 auto;padding-inline:16px;padding-block:20px 56px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.muted{color:var(--ink-2)}
+
+/* ---------- Barre du haut ---------- */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.tab-h{font-family:var(--f-display);font-weight:900;font-size:30px;line-height:1;padding:6px 10px 4px;border:2.5px solid var(--ink);border-radius:4px;letter-spacing:.02em;background:linear-gradient(90deg,transparent 0 0)}
+.brand-txt{min-width:0}
+.brand-txt b{display:block;font-family:var(--f-display);font-weight:800;font-size:21px;line-height:1.05;letter-spacing:.01em;text-transform:uppercase}
+.brand-txt>span{font-family:var(--f-mono);font-size:12px;color:var(--ink-2);letter-spacing:.06em;text-transform:uppercase}
+.tricolor{display:flex;height:4px;width:66px;border-radius:2px;overflow:hidden;margin-top:6px}
+.tricolor i{flex:1}
+.navbtns{display:flex;gap:8px}
+.ghost{background:transparent;border:1.5px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.ghost:hover{border-color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:var(--f-mono);font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:3px 10px 3px 8px}
+.chip svg{color:var(--accent);flex:none}
+
+/* ---------- Tableau de bord ---------- */
+.dash{background:var(--card);border-radius:14px;box-shadow:0 1px 0 var(--line),0 10px 30px -18px var(--shadow);padding:20px;display:grid;gap:18px}
+.player{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.lvl{width:66px;height:66px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--accent-ink);font-family:var(--f-display);font-weight:900;font-size:32px;line-height:1;position:relative}
+.lvl small{position:absolute;bottom:-8px;font-family:var(--f-mono);font-size:10px;background:var(--card);color:var(--ink);border:1.5px solid var(--accent);border-radius:999px;padding:1px 7px;letter-spacing:.06em}
+.pinfo{flex:1;min-width:200px}
+.pname h2{font-family:var(--f-display);font-weight:800;font-size:26px;line-height:1.1;text-transform:uppercase;letter-spacing:.01em}
+.xpbar{height:12px;border-radius:999px;background:var(--paper);overflow:hidden;margin-top:8px;border:1px solid var(--line)}
+.xpbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--gold));border-radius:999px;transition:width .6s ease}
+.xptxt{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:12px;color:var(--ink-2);margin-top:4px;font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat{border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}
+.stat b{display:block;font-family:var(--f-display);font-weight:900;font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.25;display:block;margin-top:3px}
+.stat.ready b{color:var(--ok)}
+.stat.fire b{color:var(--mid)}
+@media (max-width:560px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+.sec-title{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:26px 0 10px;flex-wrap:wrap}
+.sec-title h3{font-family:var(--f-display);font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.02em}
+.linkbtn{background:none;border:0;padding:0;color:var(--accent);font-weight:700;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+.stepn{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--paper);font-size:17px;margin-right:10px;vertical-align:2px}
+
+/* Thèmes */
+.themes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:640px){.themes{grid-template-columns:1fr}}
+.theme{--c:var(--accent);text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:14px;display:grid;gap:7px;transition:border-color .15s,transform .15s}
+.theme:hover{transform:translateY(-1px)}
+.theme[aria-pressed="true"]{border-color:var(--c);box-shadow:inset 0 0 0 1px var(--c);background:var(--card);background:color-mix(in srgb,var(--c) 7%,var(--card))}
+.th-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.th-ico{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;color:var(--c);background:var(--card);background:color-mix(in srgb,var(--c) 12%,var(--card))}
+.theme[aria-pressed="true"] .th-ico{background:var(--c);color:var(--card)}
+.th-part{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--c);font-weight:600}
+.th-name{font-family:var(--f-display);font-weight:800;font-size:21px;text-transform:uppercase;letter-spacing:.01em;line-height:1.05}
+.th-sub{font-size:13px;color:var(--ink-2);line-height:1.3}
+.chk,.tchk{width:20px;height:20px;border-radius:5px;border:2px solid var(--line);flex:none;display:grid;place-items:center}
+.theme[aria-pressed="true"] .chk,.ty[aria-pressed="true"] .tchk{background:var(--c);border-color:var(--c)}
+.theme[aria-pressed="true"] .chk::after,.ty[aria-pressed="true"] .tchk::after{content:"";width:10px;height:5px;border-left:2.5px solid var(--card);border-bottom:2.5px solid var(--card);transform:rotate(-45deg) translate(1px,-1px)}
+.th-meta{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:11.5px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.mbar{height:6px;border-radius:999px;background:var(--paper);overflow:hidden}
+.mbar i{display:block;height:100%;background:var(--c);border-radius:999px}
+
+/* Types */
+.types{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+@media (max-width:640px){.types{grid-template-columns:1fr}}
+.clist{margin:4px 0 10px;padding-left:20px;font-weight:700;font-size:clamp(16px,2.6vw,19px);line-height:1.4}
+.clist li{margin:3px 0}
+.yrsb{font-family:var(--f-mono);font-size:12.5px;color:var(--ink-2)}
+.cut{display:block}
+.seg.cats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;border-radius:12px;gap:4px}
+@media (max-width:640px){.seg.cats{grid-template-columns:1fr 1fr}}
+.seg.cats button{padding:7px 8px;font-size:13px;min-height:40px;border-radius:9px;line-height:1.15}
+.seg.cats button[aria-pressed="true"]{background:var(--ink);color:var(--card)}
+.idea{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:10px 12px;display:grid;gap:8px;margin-top:8px}
+.idea p{margin:0;font-size:15.5px;font-weight:700;line-height:1.35}
+.idea .why{display:block;font-size:13px;font-weight:700;color:var(--ko);margin-top:3px}
+.idea .why.okw{color:var(--ok)}
+.idea.right{border-color:var(--ok)}
+.idea.wrong{border-color:var(--ko)}
+.seg.cats button[disabled]{cursor:default}
+@media (max-width:480px){.types{grid-template-columns:1fr}}
+.ty{--c:var(--accent);display:flex;align-items:center;gap:10px;text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;font-weight:700;font-size:15px;line-height:1.2;color:var(--ink-2)}
+.ty svg{flex:none;color:var(--c)}
+.ty span{flex:1}
+.ty b{font-family:var(--f-mono);font-size:12px;font-weight:600;color:var(--ink-2);background:var(--paper);border-radius:999px;padding:1px 8px}
+.ty[aria-pressed="true"]{border-color:var(--c);color:var(--ink);box-shadow:inset 0 0 0 1px var(--c);background:var(--card);background:color-mix(in srgb,var(--c) 8%,var(--card))}
+.ty[aria-pressed="false"]{opacity:.6;background:var(--paper)}
+
+/* Modes */
+.modes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:700px){.modes{grid-template-columns:1fr}}
+.modes.off .mode:not(.exam){opacity:.55}
+.mode{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:10px;align-content:start}
+.mode h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.02em;display:flex;align-items:center;gap:8px}
+.mode p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.4}
+.mode.exam{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.veille{justify-self:start;font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);border:1.5px solid var(--mid);border-radius:999px;padding:2px 10px}
+.small-warn{font-size:12.5px!important;color:var(--mid)!important}
+.seg{display:flex;gap:4px;background:var(--paper);border-radius:999px;padding:3px;width:max-content;max-width:100%}
+.seg button{border:0;background:transparent;border-radius:999px;padding:4px 11px;font-size:13px;font-weight:700;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px var(--shadow)}
+.go{background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:11px 14px;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;gap:8px;transition:transform .12s,filter .12s}
+.go:hover{filter:brightness(1.08)}
+.go:active{transform:scale(.98)}
+.go.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.go[disabled]{opacity:.45;cursor:not-allowed}
+.review-banner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px;padding:12px 14px;border-radius:10px;border:1.5px solid var(--mid);background:var(--card);background:color-mix(in srgb,var(--mid) 8%,var(--card))}
+.review-banner p{margin:0;font-size:14.5px;min-width:0}
+.review-banner .go{background:var(--mid);color:var(--card)}
+
+.how{margin-top:16px;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px}
+.how h3{font-family:var(--f-display);font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.02em;margin:0 0 8px}
+.how ol{margin:0;padding:0;list-style:none;counter-reset:st;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.how li{counter-increment:st;font-size:14.5px;line-height:1.4;display:grid;gap:4px;align-content:start;min-width:0}
+.how li::before{content:counter(st);width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:17px}
+.how p{margin:12px 0 0;font-size:14px;color:var(--ink-2)}
+@media (max-width:640px){.how ol{grid-template-columns:1fr 1fr}}
+
+/* ---------- Session ---------- */
+.sess-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.prog{flex:1;height:10px;background:var(--card);border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--accent);transition:width .35s ease}
+.sess-count{font-family:var(--f-mono);font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.combo{font-family:var(--f-display);font-weight:900;font-size:19px;color:var(--mid);min-width:64px;text-align:right;letter-spacing:.02em}
+.combo.pop{animation:pop .35s ease}
+@keyframes pop{50%{transform:scale(1.35)}}
+
+/* Carte qui se glisse */
+.swipe{position:relative;touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;cursor:grab}
+.swipe.anim{transition:transform .32s cubic-bezier(.2,.75,.25,1)}
+.swipe.nudge{animation:nudge .45s ease}
+@keyframes nudge{20%{transform:translateX(-10px)}40%{transform:translateX(9px)}60%{transform:translateX(-6px)}80%{transform:translateX(4px)}}
+.sstamp{position:absolute;bottom:26px;z-index:5;font-family:var(--f-display);font-weight:900;font-size:clamp(20px,4vw,28px);text-transform:uppercase;letter-spacing:.04em;padding:4px 12px;border:4px solid;border-radius:8px;opacity:0;pointer-events:none;background:var(--card)}
+.sstamp.ok{left:22px;color:var(--ok);border-color:var(--ok);transform:rotate(-12deg)}
+.sstamp.ko{right:22px;color:var(--ko);border-color:var(--ko);transform:rotate(12deg)}
+.stage{perspective:1600px}
+.flip{display:grid;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.75,.25,1)}
+.flip.flipped{transform:rotateY(180deg)}
+.face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--card);border-radius:14px;box-shadow:0 1px 0 var(--line),0 18px 40px -22px var(--shadow);min-height:330px;display:flex;flex-direction:column;overflow:hidden;--c:var(--accent)}
+.face.back{transform:rotateY(180deg)}
+.ruled{flex:1;display:flex;flex-direction:column;padding:22px 22px 18px 44px;position:relative;
+  background-image:linear-gradient(var(--card) 0 0),repeating-linear-gradient(to bottom,transparent 0 27px,var(--rule) 27px 28px);
+  background-size:2px 100%,100% 100%;background-repeat:no-repeat;background-position:30px 0,0 6px}
+.ruled::before{content:"";position:absolute;left:32px;top:0;bottom:0;width:1.5px;background:var(--margin)}
+.fhead{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;border-bottom:3px solid var(--c);background:var(--card);background:color-mix(in srgb,var(--c) 9%,var(--card))}
+.ftag{font-family:var(--f-mono);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--c)}
+.fbox{font-family:var(--f-mono);font-size:11.5px;color:var(--ink-2);display:flex;gap:3px;align-items:center}
+.fbox i{width:8px;height:8px;border-radius:2px;background:var(--line);display:inline-block}
+.fbox i.on{background:var(--c)}
+.qwrap{margin:auto 0;padding-block:14px}
+.qk{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--kc);margin-bottom:8px}
+.q{font-weight:700;font-size:clamp(22px,3.8vw,30px);line-height:1.28;text-wrap:balance}
+.hint{font-family:var(--f-mono);font-size:12px;color:var(--ink-2);text-align:center;letter-spacing:.04em;margin-top:auto}
+.ans-label{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c);font-weight:600}
+.ans{font-weight:700;font-size:clamp(19px,3vw,24px);line-height:1.32;margin:4px 0 10px}
+.ans.big{font-family:var(--f-display);font-weight:900;font-size:clamp(34px,7vw,50px);line-height:1;letter-spacing:.01em;margin:6px 0 12px;color:var(--c)}
+.det{font-size:15.5px;line-height:1.6;margin:0 0 8px;color:var(--ink)}
+.qback{font-size:13.5px;color:var(--ink-2);margin:0 0 6px;font-style:italic}
+
+.sbtns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.sbtns button{border:2px solid;background:var(--card);border-radius:12px;padding:12px 8px;font-family:var(--f-display);font-weight:800;font-size:clamp(17px,3.6vw,21px);text-transform:uppercase;letter-spacing:.03em;display:flex;align-items:center;justify-content:center;gap:8px;line-height:1.05;transition:transform .1s}
+.sbtns button:active{transform:scale(.97)}
+.sb-ko{color:var(--ko);border-color:var(--ko)!important}
+.sb-ok{color:var(--ok);border-color:var(--ok)!important}
+.sb-ko:hover{background:color-mix(in srgb,var(--ko) 8%,var(--card))}
+.sb-ok:hover{background:color-mix(in srgb,var(--ok) 8%,var(--card))}
+.reveal{margin-top:12px;width:100%}
+.swipehint{text-align:center;font-size:13.5px;color:var(--ink-2);margin-top:10px;display:flex;align-items:center;justify-content:center;gap:10px}
+.swipehint b{font-weight:700}
+.keys{text-align:center;font-family:var(--f-mono);font-size:11.5px;color:var(--ink-2);margin-top:8px}
+@media (hover:none){.keys{display:none}}
+#actions{position:sticky;bottom:0;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));background:linear-gradient(to top,var(--paper) 70%,transparent);z-index:3}
+.xpfloat{position:fixed;left:50%;top:40%;transform:translateX(-50%);font-family:var(--f-display);font-weight:900;font-size:38px;color:var(--gold);pointer-events:none;animation:xpf .9s ease forwards;z-index:30;text-shadow:0 2px 0 var(--card)}
+@keyframes xpf{0%{opacity:0;transform:translate(-50%,10px)}20%{opacity:1}100%{opacity:0;transform:translate(-50%,-60px)}}
+
+/* QCM */
+.qcm-opts{display:grid;gap:10px;margin-top:14px}
+.opt{text-align:left;background:var(--card);border:2px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15.5px;line-height:1.4;display:flex;gap:12px;align-items:flex-start;touch-action:manipulation}
+.opt .l{font-family:var(--f-mono);font-weight:600;width:26px;height:26px;flex:none;border-radius:6px;display:grid;place-items:center;background:var(--paper);font-size:13px}
+.opt:hover:not([disabled]){border-color:var(--ink-2)}
+.opt.good{border-color:var(--ok);background:var(--card);background:color-mix(in srgb,var(--ok) 10%,var(--card))}
+.opt.bad{border-color:var(--ko);background:var(--card);background:color-mix(in srgb,var(--ko) 10%,var(--card))}
+.opt.chosen{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--card))}
+.opt.chosen .l{background:var(--accent);color:var(--accent-ink)}
+.opt[disabled]{cursor:default}
+.feedback{margin-top:12px;border-radius:12px;padding:12px 14px;background:var(--card);border-left:5px solid var(--ok);font-size:15px}
+.feedback.ko{border-left-color:var(--ko)}
+.feedback b.v{display:block;font-family:var(--f-display);font-size:20px;text-transform:uppercase;letter-spacing:.02em}
+.timer{height:4px;background:var(--line);overflow:hidden}
+.timer i{display:block;height:100%;background:var(--gold);width:100%}
+.qsmall{font-size:clamp(19px,3vw,24px)!important}
+.qdef{font-weight:400;font-style:italic;font-size:clamp(17px,2.6vw,20px)!important;line-height:1.45}
+
+/* Saisie d'une année */
+.yearbox{display:flex;gap:10px;align-items:center;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.yearin{font-family:var(--f-display);font-weight:900;font-size:44px;width:170px;text-align:center;letter-spacing:.06em;padding:6px 10px;border:2.5px solid var(--ink);border-radius:12px;background:var(--card);color:var(--ink);font-variant-numeric:tabular-nums}
+.yearin::placeholder{color:var(--line)}
+.datebox{display:flex;gap:10px;justify-content:center;align-items:flex-end;margin-top:16px;flex-wrap:wrap}
+.datebox label{display:grid;gap:4px;justify-items:center}
+.datebox label span{font-family:var(--f-mono);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.datebox .din{width:96px}
+.msel{font:700 20px/1.2 var(--f-body);height:66px;min-width:170px;padding:0 12px;border:2.5px solid var(--ink);border-radius:12px;background:var(--card);color:var(--ink)}
+@media (max-width:480px){.datebox .yearin{font-size:34px}.datebox .din{width:80px}.datebox [id=dA]{width:130px}.msel{height:58px;min-width:150px;font-size:18px}}
+
+
+/* Frise : remettre dans l'ordre */
+.frise-pool{display:grid;gap:10px;margin-top:14px}
+.ev{text-align:left;background:var(--card);border:2px solid var(--line);border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:12px;font-size:15.5px;line-height:1.35;--c:var(--accent);touch-action:manipulation}
+.ev .n{width:34px;height:34px;flex:none;border-radius:50%;border:2px dashed var(--line);display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:19px}
+.ev.picked{border-color:var(--accent)}
+.ev.picked .n{border:0;background:var(--accent);color:var(--accent-ink)}
+.ev .tg{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--c);display:block}
+.ev .yr{margin-left:auto;font-family:var(--f-mono);font-weight:600;font-size:13px;white-space:nowrap;color:var(--ok)}
+.ev.right{border-color:var(--ok)}
+.ev.wrong{border-color:var(--ko)}
+.ev.right .n{background:var(--ok);color:var(--card);border:0}
+.ev.wrong .n{background:var(--ko);color:var(--card);border:0}
+.ev[disabled]{cursor:default}
+.timeline{position:relative;margin-top:10px;padding-left:24px;display:grid;gap:10px}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:3px;background:var(--line);border-radius:2px}
+.tl{position:relative;font-size:15px;line-height:1.35}
+.tl::before{content:"";position:absolute;left:-21px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--c,var(--accent));border:2px solid var(--card)}
+.tl b{font-family:var(--f-mono);font-size:13px;margin-right:8px;color:var(--c)}
+
+/* Frise des régimes */
+.rbar{display:flex;height:22px;border-radius:6px;overflow:hidden;margin:6px 0 2px;border:1.5px solid var(--ink)}
+.rbar i{display:block;height:100%}
+.rticks{position:relative;height:16px;font-family:var(--f-mono);font-size:11px;color:var(--ink-2);margin-bottom:14px}
+.rticks span{position:absolute;transform:translateX(-50%)}
+.rticks span:last-child{transform:translateX(-100%)}
+.rrow.cause{margin-left:22px}
+.cause-l{display:flex;align-items:center;gap:4px;font-family:var(--f-mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);line-height:1.2}
+.cause-l svg{transform:rotate(90deg);flex:none}
+.rrow.cause .rslot{min-height:42px;font-weight:400;font-size:14.5px;border-radius:999px}
+.rdate{grid-column:2;font-family:var(--f-mono);font-size:12.5px;color:var(--ok);font-weight:600;margin-top:-4px}
+.lbl.cause{border-style:dashed;font-weight:400}
+.rrows{display:grid;gap:8px}
+.rrow{display:grid;grid-template-columns:118px 1fr;gap:10px;align-items:center}
+.rrow .yrs{font-family:var(--f-mono);font-weight:600;font-size:14px;border-left:7px solid var(--rc);padding:6px 0 6px 9px;line-height:1.2}
+.rslot{min-height:48px;border:2px dashed var(--line);border-radius:10px;display:flex;align-items:center;padding:4px 12px;background:var(--card);text-align:left;font-weight:700;font-size:15px}
+.rslot:empty::before{content:"Touchez pour placer";font-weight:400;color:var(--ink-2);font-size:13px;font-family:var(--f-mono)}
+.rslot.armed{border-color:var(--accent)}
+.rslot.good{border-style:solid;border-color:var(--ok);background:color-mix(in srgb,var(--ok) 10%,var(--card))}
+.rslot.bad{border-style:solid;border-color:var(--ko);background:color-mix(in srgb,var(--ko) 10%,var(--card))}
+.rcorr{grid-column:2;font-size:13px;color:var(--ko);font-weight:700;margin-top:-4px}
+.bank{display:flex;flex-wrap:wrap;gap:8px;padding:12px;min-height:58px;margin-top:14px;background:var(--card);border:1.5px dashed var(--line);border-radius:12px}
+.bank:empty::before{content:attr(data-empty);color:var(--ink-2);font-size:14px;padding:6px}
+.lbl{display:inline-flex;align-items:center;justify-content:center;padding:8px 13px;border-radius:999px;background:var(--card);border:2px solid var(--ink);font-weight:700;font-size:14px;line-height:1.2;text-align:center;touch-action:manipulation}
+.lbl.sel{background:var(--ink);color:var(--card)}
+@media (max-width:480px){.rrow{grid-template-columns:92px 1fr}.rrow .yrs{font-size:12.5px}.rrow.cause{margin-left:0}}
+
+
+/* Frise du cours, à l'horizontale comme la fiche */
+.fscroll{overflow-x:auto;margin-top:14px;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+.fgrid{display:grid;grid-template-columns:repeat(9,minmax(64px,1fr));gap:10px 6px;min-width:720px;align-items:start}
+.chev{background:var(--rc);color:#fff;font-family:var(--f-display);font-weight:800;font-size:clamp(16px,1.9vw,20px);line-height:1.1;letter-spacing:.02em;text-align:center;padding:8px 18px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%,14px 50%)}
+.fslot{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:8px;display:grid;gap:6px;align-content:start}
+.fslot.reg{border-top:5px solid var(--line);min-height:92px}
+.fslot.cau{border-style:dashed;border-radius:14px;background:color-mix(in srgb,var(--card) 70%,transparent)}
+.fslot.good{border-color:var(--ok);border-style:solid;background:color-mix(in srgb,var(--ok) 9%,var(--card))}
+.fslot.bad{border-color:var(--ko);border-style:solid;background:color-mix(in srgb,var(--ko) 9%,var(--card))}
+.fcap{display:flex;align-items:center;gap:4px;font-family:var(--f-mono);font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.fslot.cau .fcap svg{transform:rotate(30deg)}
+.fdrop{min-height:46px;border:2px dashed var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;padding:4px;text-align:center;transition:border-color .15s,background .15s}
+.fdrop:empty::before{content:"Déposez ici";font-family:var(--f-mono);font-size:11.5px;color:var(--ink-2)}
+.fdrop.hover,.fbank.hover{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,var(--card))}
+.fdrop .lbl{width:100%}
+.fdrop b{font-size:14.5px;line-height:1.25}
+.fdate{font-family:var(--f-mono);font-size:11.5px;font-weight:600;color:var(--ok);line-height:1.3}
+.fcorr{font-size:12.5px;font-weight:700;color:var(--ko);line-height:1.3}
+.fdrop.multi{flex-direction:column;gap:6px;align-items:stretch;min-height:52px}
+.fslot.evts{border-color:#DC2626;border-style:dashed}
+.fres{display:block;border-radius:8px;padding:5px 8px;font-weight:700;font-size:13.5px;line-height:1.25;text-align:center;border:1.5px solid}
+.fres small{display:block;font-family:var(--f-mono);font-size:11px;font-weight:600}
+.fres.ok{border-color:var(--ok);color:var(--ink)}.fres.ok small{color:var(--ok)}
+.fres.ko{border-color:var(--ko);color:var(--ko);text-decoration:line-through}
+.fres.ko small{display:none}
+.lbl.cause{font-size:13px;padding:6px 10px}
+.asso{display:grid;gap:8px;margin-top:14px}
+.sbank{position:sticky;bottom:0;z-index:4;max-height:34vh;overflow-y:auto;box-shadow:0 -10px 24px -14px var(--shadow);border-style:solid}
+.arow{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:10px;align-items:center;background:var(--card);border:2px solid var(--line);border-radius:12px;padding:8px 10px}
+.arow p{margin:0;font-weight:700;font-size:15.5px;line-height:1.3}
+.arow .fcorr{display:block;margin-top:2px}
+.arow.good{border-color:var(--ok)}.arow.bad{border-color:var(--ko)}
+.adrop{min-height:48px}
+.lbl.dlbl{font-family:var(--f-mono);font-weight:600;font-size:13.5px}
+@media (max-width:520px){.arow{grid-template-columns:1fr}}
+.fswipe{font-size:12.5px;margin:4px 0 0;display:none}
+@media (max-width:760px){.fswipe{display:block}}
+.fbank{position:relative}
+.lbl[data-l]{cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none}
+.lbl.dragging{opacity:.3}
+.dragghost{position:fixed;pointer-events:none;z-index:60;transform:translate(-50%,-50%) rotate(-3deg);box-shadow:0 10px 24px var(--shadow);max-width:240px}
+/* Choix */
+.pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px}
+.pickcard{text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:8px;align-content:start;transition:border-color .15s,transform .15s}
+.pickcard:hover{border-color:var(--ink);transform:translateY(-2px)}
+.pickcard b{font-family:var(--f-display);font-weight:800;font-size:21px;text-transform:uppercase;letter-spacing:.02em;line-height:1.1;display:flex;gap:8px;align-items:center}
+.pickcard span{font-size:14px;color:var(--ink-2);line-height:1.4}
+.pickcard .fbox{color:var(--ok);font-weight:600}
+.pickcard[disabled]{opacity:.5;cursor:not-allowed;transform:none}
+
+/* Fin de session */
+.endcard{background:var(--card);border-radius:14px;padding:22px;box-shadow:0 1px 0 var(--line),0 18px 40px -22px var(--shadow);display:grid;gap:16px}
+.endcard h2{font-family:var(--f-display);font-weight:900;font-size:clamp(30px,6vw,44px);text-transform:uppercase;line-height:1}
+.endstats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:560px){.endstats{grid-template-columns:repeat(2,1fr)}}
+.endstats .stat b.k{color:var(--ko)} .endstats .stat b.o{color:var(--ok)} .endstats .stat b.x{color:var(--gold)}
+.miss{display:grid;gap:8px}
+.miss details{border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;--c:var(--accent);background:var(--card)}
+.miss summary{cursor:pointer;font-weight:700;font-size:15px}
+.miss summary .ftag{margin-right:8px}
+.miss details p{margin:8px 0 0;font-size:15px}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.row .go{flex:1;min-width:180px}
+.h3s{font-family:var(--f-display);text-transform:uppercase;font-size:20px;margin-bottom:8px}
+.note20{font-size:clamp(56px,12vw,84px)!important;color:var(--accent)}
+.note20 small{font-size:.4em;color:var(--ink-2);margin-left:4px}
+
+/* Badges */
+.medal{width:88px;display:grid;justify-items:center;gap:6px;text-align:center}
+.medal .disc{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--gold) 55%,var(--card)),var(--gold));color:var(--card);box-shadow:inset 0 -3px 0 rgba(0,0,0,.18),0 0 0 3px var(--card),0 0 0 5px var(--gold)}
+.medal .disc svg{width:30px;height:30px}
+.medal span{font-size:12px;font-weight:700;line-height:1.2}
+.medal.locked .disc{background:var(--paper);color:var(--ink-2);box-shadow:inset 0 0 0 2px var(--line);opacity:.8}
+.medal.locked span{color:var(--ink-2);font-weight:400}
+.badge-strip{display:flex;gap:10px;flex-wrap:wrap}
+.badges-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.bitem{display:flex;gap:12px;align-items:center;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px}
+.bitem .medal{width:auto}
+.bitem .medal .disc{width:52px;height:52px}
+.bitem .medal .disc svg{width:24px;height:24px}
+.bitem b{display:block;font-size:15px}
+.bitem p{margin:0;font-size:13px;color:var(--ink-2);line-height:1.35}
+.bitem.locked b{color:var(--ink-2)}
+.bilan{background:var(--card);border-radius:14px;padding:20px;border:2px solid var(--ink);display:grid;gap:12px;position:relative;overflow:hidden}
+.bilan .stamp{position:absolute;right:14px;top:14px;transform:rotate(8deg);border:3px solid var(--ok);color:var(--ok);font-family:var(--f-display);font-weight:900;font-size:18px;text-transform:uppercase;padding:2px 10px;border-radius:6px;letter-spacing:.04em}
+.bilan h2{font-family:var(--f-display);font-weight:900;font-size:28px;text-transform:uppercase;padding-right:120px}
+.tbars{display:grid;gap:7px}
+.tbar{display:grid;grid-template-columns:170px 1fr 44px;gap:10px;align-items:center;font-size:14px;--c:var(--accent)}
+.tbar .mbar{height:9px}
+.tbar b{font-family:var(--f-mono);font-size:13px;text-align:right;font-variant-numeric:tabular-nums}
+@media (max-width:480px){.tbar{grid-template-columns:120px 1fr 40px;font-size:13px}}
+.bh{margin:6px 0 0;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.listh{margin:14px 0 6px;font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.danger{background:none;border:1.5px solid var(--ko);color:var(--ko);border-radius:8px;padding:7px 12px;font-weight:700;font-size:13.5px}
+.confirm-box{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:14px}
+
+/* Toast et confettis */
+.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(160%);background:var(--ink);color:var(--paper);border-radius:14px;padding:12px 16px 12px 12px;display:flex;align-items:center;gap:12px;z-index:40;transition:transform .45s cubic-bezier(.2,.9,.3,1.2);max-width:calc(100% - 32px);box-shadow:0 12px 30px -10px var(--shadow)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast .medal{width:auto}
+.toast .medal .disc{width:46px;height:46px;box-shadow:0 0 0 2px var(--ink),0 0 0 4px var(--gold)}
+.toast .medal .disc svg{width:22px;height:22px}
+.toast small{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.toast b{font-size:16px}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:35}
+.foot{margin-top:34px;font-size:12.5px;color:var(--ink-2);text-align:center;font-family:var(--f-mono)}
+.fade-in{animation:fin .3s ease}
+@keyframes fin{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+button,.opt,.ev,.theme{-webkit-tap-highlight-color:transparent}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .flip{transform:none!important}
+  .face.back{transform:none}
+  .flip .face.back{visibility:hidden}
+  .flip.flipped .face.front{visibility:hidden}
+  .flip.flipped .face.back{visibility:visible}
+}
+@media (max-height:520px){
+  .face{min-height:210px}
+  .qwrap{padding-block:6px}
+  .ruled{padding-top:12px;padding-bottom:10px}
+  .wrap{padding-block:10px 30px}
+}
+</style>
+</head>
+<body>
+<script>
+/* Adresse du récepteur Google Sheets (statistiques anonymes, partagé par toutes les applis) */
+window.H3_STATS_URL = "https://script.google.com/macros/s/AKfycbyyIpY59EXu05C_mLzop50w94Vpw6fELQXTQHtWFP5DZQ3N7KXNg0njtVo8RPXj_DIG/exec";
+</script>
+<main class="wrap" id="app" aria-live="polite"></main>
+<noscript><p style="padding:16px">Active JavaScript pour utiliser l'application de révision.</p></noscript>
+<script>
+/* =========================================================
+   CONTENU DU CHAPITRE H3 : à modifier ici
+   ========================================================= */
+const THEMES = {
+  h3: {label:"La Révolution française et l'Empire", short:"H3", color:"var(--c-pol)", icon:"crown"}
+};
+const TYPES = {
+  dat: {label:"Dates repères", short:"Date", color:"var(--k-dat)", icon:"cal"},
+  def: {label:"Définitions",   short:"Définition", color:"var(--k-def)", icon:"book"},
+  car: {label:"Caractéristiques des régimes", short:"Régime", color:"var(--c-eur)", icon:"crown"}
+};
+
+/* DATES : w = la date à savoir, e = l'événement, key = date pour classer (AAAA-MM-JJ),
+   y = année à taper dans l'interrogation blanche (null pour une période), per = 1 pour une période, d = corrigé détaillé */
+const DATES = [
+/* ---------- Une révolution politique ---------- */
+{id:"pd1",t:"h3",w:"5 mai 1789",key:"1789-05-05",y:1789,e:"Ouverture des États généraux à Versailles",d:"Louis XVI les convoque pour trouver une solution à la grave crise financière du royaume."},
+{id:"pd2",t:"h3",w:"20 juin 1789",key:"1789-06-20",y:1789,e:"Serment du Jeu de paume",d:"Les députés du tiers état, qui se sont proclamés <b>Assemblée nationale</b> le 17 juin, jurent de ne pas se séparer avant d'avoir donné une Constitution à la France."},
+{id:"pd3",t:"h3",w:"14 juillet 1789",key:"1789-07-14",y:1789,e:"Prise de la Bastille",d:"Le peuple de Paris s'empare de cette forteresse-prison, symbole du pouvoir absolu du roi. C'est aujourd'hui notre fête nationale."},
+{id:"pd5",t:"h3",w:"20 et 21 juin 1791",key:"1791-06-21",y:1791,e:"Fuite du roi, arrêté à Varennes",d:"Louis XVI tente de quitter la France. Il est soupçonné d'avoir des liens avec les rois étrangers ennemis de la Révolution et perd la confiance des Français."},
+{id:"pd6",t:"h3",w:"1789",key:"1789-09-01",y:1789,e:"Début de la monarchie constitutionnelle",d:"Le roi garde le pouvoir exécutif ; une assemblée élue par le peuple a le pouvoir législatif. La Constitution qui organise ce régime est adoptée en 1791."},
+{id:"pd7",t:"h3",w:"10 août 1792",key:"1792-08-10",y:1792,e:"Prise du palais des Tuileries : chute de la monarchie",d:"Le peuple de Paris et les sans-culottes attaquent le palais. Le roi est suspendu puis emprisonné."},
+{id:"pd8",t:"h3",w:"1792",key:"1792-09-21",y:1792,e:"Abolition de la monarchie et proclamation de la République",d:"La Convention, élue au suffrage universel masculin, abolit la royauté le 21 septembre. Le 22 septembre 1792 commence l'an I de la République."},
+{id:"pd9",t:"h3",w:"21 janvier 1793",key:"1793-01-21",y:1793,e:"Exécution de Louis XVI",d:"Jugé et condamné par la Convention, il est guillotiné à Paris, place de la Révolution (aujourd'hui place de la Concorde)."},
+{id:"pd10",t:"h3",w:"1794",key:"1794-07-27",y:1794,e:"Fin de la Terreur",d:"Chute de Robespierre, le 27 juillet 1794 (9 thermidor an II). Il est guillotiné le lendemain."},
+{id:"pd11",t:"h3",w:"9 novembre 1799 (18 brumaire)",key:"1799-11-09",y:1799,e:"Coup d'État de Bonaparte",d:"Le général Bonaparte prend le pouvoir par la force : c'est le début du <b>Consulat</b>. Il devient Premier consul."},
+{id:"pd13",t:"h3",w:"2 décembre 1804",key:"1804-12-02",y:1804,e:"Sacre de Napoléon Ier, empereur des Français",d:"À Notre-Dame de Paris, en présence du pape. Napoléon se couronne lui-même."},
+{id:"pp0",t:"h3",per:1,w:"Jusqu'en 1789",key:"1780-01-01",y:null,e:"La monarchie absolue",d:"Le roi, de droit divin, a tous les pouvoirs ; la société des trois ordres est inégalitaire."},
+{id:"pp1",t:"h3",per:1,w:"1789-1792",key:"1789-07-01",y:null,e:"La monarchie constitutionnelle",d:"Le roi partage le pouvoir avec une assemblée élue. La Constitution qui l'organise est adoptée en 1791. Elle prend fin le 10 août 1792."},
+{id:"pp2",t:"h3",per:1,w:"1792-1804",key:"1792-09-22",y:null,e:"La République",d:"La Première République est dirigée par la Convention (1792-1795), puis le Directoire (1795-1799), puis par Bonaparte sous le Consulat (1799-1804)."},
+{id:"pp3",t:"h3",per:1,w:"1793-1794",key:"1793-09-05",y:null,e:"La Terreur",d:"Pour défendre la Révolution menacée, le gouvernement de Robespierre suspend les libertés et fait exécuter des milliers de suspects."},
+{id:"pp5",t:"h3",per:1,w:"1804-1815",key:"1804-05-18",y:null,e:"Le Premier Empire",d:"Napoléon Ier gouverne de façon autoritaire. L'Empire prend fin après la défaite de Waterloo, en 1815."},
+
+/* ---------- Une nouvelle société ---------- */
+{id:"sd1",t:"h3",w:"Printemps 1789",key:"1789-03-15",y:1789,e:"Rédaction des cahiers de doléances",d:"Dans tout le royaume, les Français écrivent leurs plaintes et leurs souhaits pour les États généraux."},
+{id:"sd2",t:"h3",w:"Nuit du 4 août 1789",key:"1789-08-04",y:1789,e:"Abolition des privilèges",d:"Les députés suppriment les privilèges de la noblesse et du clergé : c'est la fin de la société d'ordres."},
+
+/* ---------- La guerre et l'Europe ---------- */
+{id:"ed11",t:"h3",w:"18 juin 1815",key:"1815-06-18",y:1815,e:"Défaite de Waterloo",d:"Défaite définitive face aux Britanniques et aux Prussiens. Napoléon est exilé à Sainte-Hélène, où il meurt en 1821."},
+];
+
+/* DÉFINITIONS : w = le mot, a = la définition, d = précision ou exemple,
+   cours:1 = définition en rouge dans le cours : elle tombe toujours à l'interrogation blanche */
+const DEFS = [
+/* ---------- Une révolution politique ---------- */
+{id:"pw1",t:"h3",cours:1,w:"États généraux",a:"Assemblée de représentants des trois ordres (clergé, noblesse, tiers état) réunis par le roi.",d:"Louis XVI les convoque à Versailles en mai 1789 pour résoudre la crise financière."},
+{id:"pw2",t:"h3",cours:1,w:"Révolution",a:"Changement brutal dans l'organisation sociale et politique d'un pays."},
+{id:"pw3",t:"h3",cours:1,w:"Constitution",a:"Texte de loi fondamental qui définit l'organisation des pouvoirs d'un État.",d:"La première Constitution française date de 1791."},
+{id:"pw4",t:"h3",cours:1,w:"République",a:"Régime politique où les dirigeants sont élus par les citoyens.",d:"La Première République est proclamée en septembre 1792."},
+{id:"pw5",t:"h3",cours:1,w:"Monarchie constitutionnelle",a:"Régime politique où le roi partage ses pouvoirs avec une assemblée élue, selon une Constitution.",d:"En France de 1789 à 1792 : le roi a le pouvoir exécutif, l'Assemblée vote les lois."},
+{id:"pw6",t:"h3",w:"Monarchie absolue de droit divin",a:"Régime politique où le roi détient tous les pouvoirs, qu'il tient de Dieu.",d:"C'est le régime de la France avant 1789."},
+{id:"pw8",t:"h3",w:"Assemblée nationale",a:"Assemblée de députés qui représente l'ensemble de la nation.",d:"Les députés du tiers état se proclament Assemblée nationale le 17 juin 1789."},
+{id:"pw9",t:"h3",w:"Souveraineté nationale",a:"Principe selon lequel le pouvoir appartient à la nation, c'est-à-dire au peuple, qui l'exerce par le vote, et non plus au roi."},
+{id:"pw10",t:"h3",w:"Séparation des pouvoirs",a:"Principe selon lequel les pouvoirs législatif (voter les lois), exécutif (les appliquer) et judiciaire (juger) sont confiés à des personnes différentes.",d:"C'est une idée du philosophe des Lumières Montesquieu."},
+{id:"pw22",t:"h3",w:"Calendrier républicain",a:"Calendrier créé par la Révolution : 12 mois de 30 jours, divisés en 3 périodes de 10 jours ; une journée de 10 heures, une heure de 100 minutes.",d:"L'an I commence le 22 septembre 1792, jour de la proclamation de la République."},
+{id:"pw23",t:"h3",w:"Symboles de la République",a:"Les nouveaux symboles adoptés par la Révolution : le drapeau tricolore, la devise et le calendrier républicain.",d:"La devise : « Liberté, Égalité, Fraternité »."},
+{id:"pw14",t:"h3",w:"Terreur",a:"Période (1793-1794) où le gouvernement révolutionnaire suspend les libertés et fait arrêter et exécuter les suspects pour défendre la Révolution.",d:"Elle est dirigée par Robespierre et prend fin avec sa chute, le 27 juillet 1794."},
+{id:"pw16",t:"h3",w:"Coup d'État",a:"Prise du pouvoir par la force, de façon illégale.",d:"Bonaparte prend le pouvoir par un coup d'État le 18 brumaire (9 novembre 1799)."},
+{id:"pw18",t:"h3",w:"Empire",a:"Régime politique dirigé par un empereur, qui a un pouvoir absolu et héréditaire.",d:"Le Premier Empire de Napoléon Ier dure de 1804 à 1815."},
+
+/* ---------- Une nouvelle société ---------- */
+{id:"sw1",t:"h3",w:"Société d'ordres",a:"Société divisée en trois groupes inégaux, définis par la naissance : le clergé, la noblesse et le tiers état."},
+{id:"sw2",t:"h3",w:"Tiers état",a:"Ordre qui regroupe la grande majorité de la population (paysans, artisans, bourgeois), sans privilèges.",d:"Il représente environ 98 % des Français en 1789."},
+{id:"sw3",t:"h3",w:"Privilèges",a:"Droits particuliers réservés à certains groupes, comme le clergé et la noblesse, par exemple ne pas payer certains impôts.",d:"Ils sont abolis dans la nuit du 4 août 1789."},
+{id:"sw4",t:"h3",w:"Cahiers de doléances",a:"Registres dans lesquels les Français écrivent leurs plaintes et leurs souhaits avant les États généraux de 1789."},
+{id:"sw5",t:"h3",w:"Abolition",a:"Suppression d'une loi, d'un droit ou d'une pratique.",d:"Exemples : l'abolition des privilèges (1789), l'abolition de l'esclavage (1794)."},
+{id:"sw7",t:"h3",w:"Citoyen",a:"Personne qui a des droits politiques, comme le droit de vote, et des devoirs dans un État."},
+{id:"sw8",t:"h3",w:"Égalité devant la loi",a:"Principe selon lequel la loi est la même pour tous, sans privilèges liés à la naissance."},
+{id:"sw10",t:"h3",w:"Sans-culottes",a:"Révolutionnaires parisiens issus du peuple (artisans, boutiquiers), qui portent le pantalon et non la culotte des nobles.",d:"Ils jouent un grand rôle dans la chute de la monarchie en 1792."},
+
+/* ---------- La guerre et l'Europe ---------- */
+];
+
+/* CARACTÉRISTIQUES DES RÉGIMES (d'après la fiche-frise du cours)
+   c = caractéristiques (réponse des flip cards et des QCM), d = événements importants ou précision */
+const REGS = [
+  {id:"rc1",t:"h3",w:"La monarchie absolue",yrs:"Jusqu'en 1789",c:["Le roi est de droit divin et a tous les pouvoirs","La société est inégalitaire : elle est divisée en trois ordres"]},
+  {id:"rc2",t:"h3",w:"La monarchie constitutionnelle",yrs:"De 1789 à 1792",c:["Le roi a le pouvoir exécutif","Une assemblée élue par le peuple a le pouvoir législatif","La souveraineté nationale : le pouvoir est donné au peuple, par le vote"]},
+  {id:"rc3",t:"h3",w:"La République",yrs:"De 1792 à 1804",c:["L'égalité des citoyens","La souveraineté nationale","De nouveaux symboles : le drapeau tricolore, le calendrier républicain, la devise"]},
+  {id:"rc4",t:"h3",w:"Le Premier Empire",yrs:"De 1804 à 1815",c:["L'empereur a un pouvoir absolu","Le pouvoir est héréditaire"]}
+];
+/* Exercice « Trier les caractéristiques » : r = numéro(s) du régime dans REGS (0 à 3) */
+const TRI = [
+  {x:"Un roi de droit divin qui a tous les pouvoirs",r:[0]},
+  {x:"Une société inégalitaire, divisée en trois ordres",r:[0]},
+  {x:"Le roi a le pouvoir exécutif",r:[1]},
+  {x:"Une assemblée élue par le peuple a le pouvoir législatif",r:[1]},
+  {x:"La souveraineté nationale : le pouvoir est donné au peuple, par le vote",r:[1,2],w:"Elle vaut pour la monarchie constitutionnelle et pour la République."},
+  {x:"L'égalité des citoyens",r:[2]},
+  {x:"Nouveaux symboles : drapeau tricolore, calendrier républicain, devise",r:[2]},
+  {x:"Un empereur qui a un pouvoir absolu",r:[3]},
+  {x:"Le pouvoir de l'empereur est héréditaire",r:[3]}
+];
+
+/* Frise du cours (comme la fiche distribuée) : 4 régimes, une étiquette par événement.
+   z = case de l'événement (cause du changement, événements importants de la République, fin), dt = date affichée au corrigé */
+const FR_REG = [
+  {yrs:"Avant 1789",     n:"Monarchie absolue",           c:"#6B7280"},
+  {yrs:"De 1789 à 1792", n:"Monarchie constitutionnelle", c:"#2563EB"},
+  {yrs:"De 1792 à 1804", n:"République",                  c:"#DC2626"},
+  {yrs:"De 1804 à 1815", n:"Premier Empire",              c:"#7C3AED"}
+];
+const FR_ZONES = [
+  {id:"z0", cap:"Cause du changement",   col:"2 / span 2", row:4},
+  {id:"z1", cap:"Cause du changement",   col:"4 / span 2", row:4},
+  {id:"zr", cap:"Événements importants", col:"5 / span 2", row:3},
+  {id:"z2", cap:"Cause du changement",   col:"6 / span 2", row:4},
+  {id:"z3", cap:"Fin",                   col:"8 / span 2", row:4}
+];
+const FR_EVTS = [
+  {n:"Serment du Jeu de paume",          z:"z0", dt:"20 juin 1789"},
+  {n:"Prise de la Bastille",             z:"z0", dt:"14 juillet 1789"},
+  {n:"Abolition des privilèges",         z:"z0", dt:"4 août 1789"},
+  {n:"Fuite du roi à Varennes",          z:"z1", dt:"20 et 21 juin 1791"},
+  {n:"Prise du palais des Tuileries",    z:"z1", dt:"10 août 1792"},
+  {n:"Exécution de Louis XVI",           z:"zr", dt:"21 janvier 1793"},
+  {n:"La Terreur",                       z:"zr", dt:"1793-1794"},
+  {n:"Coup d'État de Napoléon Bonaparte",z:"zr", dt:"9 novembre 1799"},
+  {n:"Sacre de Napoléon Ier",            z:"z2", dt:"2 décembre 1804"},
+  {n:"Défaite de Waterloo",              z:"z3", dt:"18 juin 1815"}
+];
+const FR_TOTAL = FR_REG.length + FR_EVTS.length;
+
+const BADGES = [
+  {id:"first",   name:"Premier cahier",       desc:"Réviser 10 cartes.",                                   icon:"feather"},
+  {id:"streak5", name:"En série",             desc:"Glisser 5 cartes « Je sais » d'affilée.",               icon:"bolt"},
+  {id:"comeback",name:"Persévérant",          desc:"Retenir 5 cartes que vous ne saviez pas.",              icon:"loop"},
+  {id:"chrono",  name:"Maître du temps",      desc:"Réussir une frise sans aucune erreur.",                 icon:"timeline"},
+  {id:"master",  name:"Citoyen éclairé",      desc:"Maîtriser 80 % des cartes de tout le chapitre.",        icon:"bulb"},
+  {id:"ready",   name:"Prêt pour l'interro",  desc:"Avoir 16/20 ou plus à l'interrogation blanche.",        icon:"check"}
+];
+const LEVELS = [
+  [0,"Sujet du roi"],[.15,"Député du tiers état"],[.4,"Citoyen actif"],
+  [.65,"Prêt pour l'interro"],[.85,"Expert de la Révolution"],[.98,"Légende de 1789"]
+];
+
+(function(){
+"use strict";
+const KEY = "h3-revolution-empire-4e-v1";
+const TH = Object.keys(THEMES), TY = Object.keys(TYPES);
+const $ = s => document.querySelector(s);
+const app = $("#app");
+
+/* Toutes les cartes : une par date, une par définition */
+const CARDS = DATES.map(x => Object.assign({ty:"dat"}, x)).concat(DEFS.map(x => Object.assign({ty:"def"}, x)), REGS.map(x => Object.assign({ty:"car"}, x)));
+const byId = Object.fromEntries(CARDS.map(c => [c.id, c]));
+
+/* ---------- Sauvegarde ---------- */
+function fresh(){ return {xp:0, cards:{}, badges:{}, days:[], reviewed:0, bestStreak:0, comeback:0, sel:[], types:["dat","def","car"], size:20, car:1}; }
+let S = fresh();
+try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(fresh(), JSON.parse(raw)); } catch(e) {}
+S.sel = ["h3"]; S.types = S.types.filter(t => TYPES[t]);
+if (!S.car) { if (!S.types.includes("car")) S.types.push("car"); S.car = 1; }
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e) {} }
+
+/* ---------- Outils ---------- */
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const box = id => (S.cards[id] || {}).b || 0;
+const cardScore = id => { const b = box(id); return b <= 1 ? 0 : b === 2 ? .4 : b === 3 ? .7 : 1; };
+const mastery = list => list.length ? list.reduce((s, c) => s + cardScore(c.id), 0) / list.length : 0;
+const inTheme = t => CARDS.filter(c => c.t === t);
+const inType = k => CARDS.filter(c => c.ty === k);
+const pct = x => Math.round(x * 100);
+const ymd = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+const today = () => ymd(new Date());
+const tomorrow = () => { const d = new Date(); d.setDate(d.getDate() + 1); return ymd(d); };
+const esc = s => String(s).replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const strip = s => String(s).replace(/<[^>]+>/g, "");
+const tagOf = c => TYPES[c.ty].short;
+const dayNum = k => Date.parse(k) / 864e5;
+const yearOf = c => +c.key.slice(0, 4);
+const reduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+function keepScroll(fn){ const y = window.scrollY; fn(); window.scrollTo(0, y); }
+
+function level(){
+  const m = mastery(CARDS);
+  let i = 0; for (let k = 0; k < LEVELS.length; k++) if (m >= LEVELS[k][0]) i = k;
+  if (i > (S.lvl || 0)) { S.lvl = i; save(); }
+  i = Math.max(i, S.lvl || 0);
+  const cur = LEVELS[i][0], next = LEVELS[i + 1] ? LEVELS[i + 1][0] : null;
+  return {n:i + 1, name:LEVELS[i][1], next, p: next ? Math.max(0, Math.min(1, (m - cur) / (next - cur))) : 1};
+}
+function dayStreak(){
+  const set = new Set(S.days); let n = 0; const d = new Date();
+  if (!set.has(today())) d.setDate(d.getDate() - 1);
+  while (set.has(ymd(d))) { n++; d.setDate(d.getDate() - 1); }
+  return n;
+}
+function markDay(){ const t = today(); if (!S.days.includes(t)) S.days.push(t); }
+const dueIds = () => CARDS.filter(c => { const r = S.cards[c.id]; if (!r) return false; return r.due ? r.due <= today() : r.b === 1; }).map(c => c.id);
+
+/* ---------- Icônes ---------- */
+const P = {
+  crown:'<path d="M3 19h18"/><path d="M4 16 3 7l5 4 4-7 4 7 5-4-1 9z"/>',
+  people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c.8-3.5 3.2-5.5 6-5.5s5.2 2 6 5.5"/><path d="M15.5 14.7c2.4.2 4.2 2 4.8 5.3"/>',
+  swords:'<path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6M16 16l4 4M19 21l2-2"/><path d="M14.5 6.5 18 3h3v3l-3.5 3.5"/><path d="m5 14 4 4M7 17l-3 3M3 19l2 2"/>',
+  cal:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+  book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M9 7h6"/>',
+  feather:'<path d="M20 4c-6 0-11 4-12 11l-4 5"/><path d="M8 15c5 0 9-3 10-8M14 9l-6 6"/>',
+  bolt:'<path d="M13 3 5 14h6l-1 7 8-11h-6z"/>',
+  loop:'<path d="M4 12a8 8 0 0 1 14-5l2 2M20 12a8 8 0 0 1-14 5l-2-2"/><path d="M20 4v5h-5M4 20v-5h5"/>',
+  timeline:'<path d="M3 12h18"/><circle cx="6" cy="12" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="18" cy="12" r="2.2"/><path d="M6 5v3M12 16v3M18 5v3"/>',
+  bulb:'<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/>',
+  check:'<circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/>',
+  clock:'<circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/>',
+  flip:'<path d="M4 7h11a5 5 0 0 1 0 10H9"/><path d="m8 3-4 4 4 4"/>',
+  quiz:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"/>',
+  arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',
+  back:'<path d="M19 12H5M11 6l-6 6 6 6"/>',
+  medal:'<circle cx="12" cy="14" r="6"/><path d="M8 3h8l-2 5h-4z"/>',
+  pin:'<path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/>',
+  user:'<circle cx="12" cy="8" r="3.5"/><path d="M5 20c1-3.6 3.8-5.5 7-5.5s6 1.9 7 5.5"/>',
+  yes:'<path d="m5 12 5 5 9-10"/>',
+  no:'<path d="M6 6l12 12M18 6 6 18"/>',
+  sort:'<path d="M4 6h10M4 12h7M4 18h4M17 4v16M14 17l3 3 3-3"/>',
+  bars:'<rect x="3" y="9" width="5" height="6" rx="1"/><rect x="9.5" y="9" width="5" height="6" rx="1"/><rect x="16" y="9" width="5" height="6" rx="1"/>'
+};
+const ico = (n, sz) => `<svg viewBox="0 0 24 24" width="${sz||20}" height="${sz||20}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${P[n]||""}</svg>`;
+const medal = (b, locked) => `<div class="medal${locked ? " locked" : ""}"><div class="disc">${ico(b.icon, 30)}</div></div>`;
+
+/* ---------- Badges, XP, confettis ---------- */
+function checkBadges(ctx){
+  ctx = ctx || {};
+  const got = [];
+  const give = id => { const bd = BADGES.find(b => b.id === id); if (bd && !S.badges[id]) { S.badges[id] = today(); got.push(bd); } };
+  if (S.reviewed >= 10) give("first");
+  if (S.bestStreak >= 5) give("streak5");
+  if (S.comeback >= 5) give("comeback");
+  if (ctx.chrono) give("chrono");
+  if (mastery(CARDS) >= .8) give("master");
+  if ((S.examBest || 0) >= 16) give("ready");
+  if (got.length) { save(); got.forEach((b, i) => setTimeout(() => toast(b), i * 2600)); }
+}
+let toastEl;
+function toast(b){
+  if (!toastEl) { toastEl = document.createElement("div"); toastEl.className = "toast"; toastEl.setAttribute("role", "status"); document.body.appendChild(toastEl); }
+  toastEl.innerHTML = medal(b) + `<div><small>Badge débloqué</small><b>${esc(b.name)}</b></div>`;
+  typo(toastEl);
+  requestAnimationFrame(() => toastEl.classList.add("show"));
+  confetti();
+  clearTimeout(toastEl._t); toastEl._t = setTimeout(() => toastEl.classList.remove("show"), 2300);
+}
+function confetti(){
+  if (reduced()) return;
+  let c = $("#confetti"); if (!c) { c = document.createElement("canvas"); c.id = "confetti"; document.body.appendChild(c); }
+  const ctx = c.getContext("2d"), W = c.width = innerWidth, H = c.height = innerHeight;
+  const cols = ["#1D4ED8", "#FFFFFF", "#DC2626", "#E3B252"];
+  const ps = Array.from({length:90}, () => ({x:W/2 + (Math.random()-.5)*80, y:H*.75, vx:(Math.random()-.5)*12, vy:-Math.random()*14-6, r:Math.random()*6+3, c:cols[Math.floor(Math.random()*cols.length)], a:Math.random()*6, s:(Math.random()-.5)*.3}));
+  let f = 0;
+  (function tick(){
+    ctx.clearRect(0,0,W,H);
+    ps.forEach(p => { p.x += p.vx; p.y += p.vy; p.vy += .42; p.vx *= .99; p.a += p.s; ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.a); ctx.fillStyle = p.c; ctx.strokeStyle = "rgba(0,0,0,.15)"; ctx.fillRect(-p.r/2,-p.r/4,p.r,p.r/2); ctx.strokeRect(-p.r/2,-p.r/4,p.r,p.r/2); ctx.restore(); });
+    if (++f < 110) requestAnimationFrame(tick); else ctx.clearRect(0,0,W,H);
+  })();
+}
+function addXP(n){
+  S.xp += n; if (n <= 0) return;
+  const el = document.createElement("div"); el.className = "xpfloat"; el.textContent = "+" + n + " XP";
+  document.body.appendChild(el); setTimeout(() => el.remove(), 950);
+}
+
+/* ---------- Statistiques anonymes ---------- */
+function track(name){ try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({path: "h3-" + name, title: name, event: true}); } catch(e) {} }
+const APP_NAME = "Réviser 4e H3";
+const STATS_URL = window.H3_STATS_URL || "";
+function deviceType(){
+  try { const touch = matchMedia("(pointer: coarse)").matches; if (!touch) return "ordinateur"; return Math.min(screen.width, screen.height) < 600 ? "téléphone" : "tablette"; } catch(e) { return ""; }
+}
+function reportVisit(){
+  try {
+    if (!STATS_URL || navigator.webdriver) return;
+    const send = () => {
+      ["pointerdown", "keydown", "touchstart"].forEach(ev => removeEventListener(ev, send, true));
+      try { if (sessionStorage.getItem("h3-visite")) return; sessionStorage.setItem("h3-visite", "1"); } catch(e) {}
+      fetch(STATS_URL, {method:"POST", mode:"no-cors", keepalive:true, headers:{"Content-Type":"text/plain;charset=utf-8"},
+        body: JSON.stringify({type:"visite", app:APP_NAME, appareil:deviceType()})}).catch(() => {});
+    };
+    ["pointerdown", "keydown", "touchstart"].forEach(ev => addEventListener(ev, send, {capture:true, passive:true}));
+  } catch(e) {}
+}
+function report(mode){
+  try {
+    if (!STATS_URL || navigator.webdriver) return;
+    fetch(STATS_URL, {method:"POST", mode:"no-cors", keepalive:true, headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify({app:APP_NAME, mode})}).catch(() => {});
+  } catch(e) {}
+}
+
+/* ---------- Typographie française : espace insécable avant : ; ! ? » et après « ---------- */
+const NB = " ";
+function typo(root){
+  const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT); let n;
+  while ((n = w.nextNode())) {
+    const v = n.nodeValue;
+    const nv = v.replace(/ ([:;!?»])/g, NB + "$1").replace(/« /g, "«" + NB);
+    if (nv !== v) n.nodeValue = nv;
+  }
+}
+new MutationObserver(() => typo(app)).observe(app, {childList:true, subtree:true});
+
+/* ---------- Répétition espacée ---------- */
+function grade(id, ok){
+  const rec = S.cards[id] || (S.cards[id] = {b:0, ok:0, ko:0});
+  if (ok) {
+    if (rec.f) { S.comeback++; rec.f = false; }
+    // carte non sue : elle revient à J+1, puis J+3, puis J+7 tant qu'elle est sue
+    if (rec.st && rec.st < 3) { const d = new Date(); d.setDate(d.getDate() + (rec.st === 1 ? 3 : 7)); rec.due = ymd(d); rec.st++; }
+    else { delete rec.due; rec.st = 0; }
+    rec.b = Math.min(5, Math.max(rec.b, 1) + 1); rec.ok++;
+  } else {
+    rec.b = 1; rec.ko++; rec.f = true; rec.due = tomorrow(); rec.st = 1;
+  }
+  rec.last = Date.now();
+  S.reviewed++; markDay();
+}
+function pool(){ return CARDS.filter(c => S.sel.includes(c.t) && S.types.includes(c.ty)); }
+function pick(list, n){
+  const now = Date.now();
+  return list.map(c => {
+    const r = S.cards[c.id]; const b = r ? r.b : 0;
+    let pr = b === 0 ? 1.3 : b === 1 ? 0 : b;
+    if (r && r.last && now - r.last < 8 * 60 * 1000) pr += 1.5;
+    return {c, pr: pr + Math.random() * 1.2};
+  }).sort((a, b) => a.pr - b.pr).slice(0, n).map(x => x.c);
+}
+
+/* ---------- Questions à choix multiples (les mauvaises réponses sont prises dans le chapitre) ---------- */
+function makeQ(c, forceDir){
+  let prompt, good, cands, small = false, defStyle = false;
+  if (c.ty === "dat") {
+    const rev = forceDir != null ? forceDir : (!c.per && Math.random() < .4);
+    if (rev && !c.per) {
+      prompt = `Que se passe-t-il ? <b>${esc(c.w)}</b>`; good = c.e;
+      cands = DATES.filter(o => !o.per && o.id !== c.id && yearOf(o) !== yearOf(c)).sort((a, b) => Math.abs(dayNum(a.key) - dayNum(c.key)) - Math.abs(dayNum(b.key) - dayNum(c.key))).slice(0, 8).map(o => o.e);
+    } else {
+      prompt = c.per ? `Quelles sont les dates de cette période ? <b>${esc(c.e)}</b>` : `Quelle est la date ? <b>${esc(c.e)}</b>`; good = c.w;
+      cands = DATES.filter(o => !!o.per === !!c.per && o.id !== c.id && o.w !== c.w && (c.per || yearOf(o) !== yearOf(c)))
+        .sort((a, b) => Math.abs(dayNum(a.key) - dayNum(c.key)) - Math.abs(dayNum(b.key) - dayNum(c.key))).slice(0, 7).map(o => o.w);
+    }
+  } else if (c.ty === "car") {
+    const rev = forceDir != null ? forceDir : Math.random() < .5, others = REGS.filter(o => o.id !== c.id);
+    if (rev) { prompt = `Quel régime a ces caractéristiques ?<br><span class="qdef">« ${esc(c.c.join(" ; "))} »</span>`; good = c.w; cands = others.map(o => o.w); defStyle = true; }
+    else { prompt = `Quelles sont les caractéristiques de ce régime ? <b>${esc(c.w)}</b>`; good = c.c.join(" ; "); cands = others.map(o => o.c.join(" ; ")); small = true; }
+  } else {
+    const rev = forceDir != null ? forceDir : Math.random() < .5;
+    const same = DEFS.filter(o => o.id !== c.id && o.t === c.t), other = DEFS.filter(o => o.id !== c.id && o.t !== c.t);
+    const src = shuffle(same).slice(0, 6).concat(shuffle(other).slice(0, 2));
+    if (rev) { prompt = `Quel mot correspond à cette définition ?<br><span class="qdef">« ${esc(c.a)} »</span>`; good = c.w; cands = src.map(o => o.w); defStyle = true; }
+    else { prompt = `Quelle est la bonne définition ? <b>${esc(c.w)}</b>`; good = c.a; cands = src.map(o => o.a); small = true; }
+  }
+  const wrong = shuffle([...new Set(cands)].filter(x => x !== good)).slice(0, 3);
+  return {c, prompt, good, opts: shuffle([good].concat(wrong)), small, defStyle};
+}
+
+/* =========================================================
+   ACCUEIL
+   ========================================================= */
+let view = "home", confirmReset = false;
+function home(){
+  view = "home"; stopTimer();
+  const lv = level(), g = mastery(CARDS);
+  const acquired = CARDS.filter(c => box(c.id) >= 3).length;
+  const due = dueIds().length, nb = Object.keys(S.badges).length;
+  const p = pool(), none = !S.sel.length, noType = !S.types.length;
+  const sizes = [10, 20, 40, "Tout"];
+  const tCount = k => CARDS.filter(c => c.ty === k && (none || S.sel.includes(c.t))).length;
+  app.innerHTML = `
+  <header class="top">
+    <div class="brand"><div class="tab-h" aria-hidden="true">H3</div>
+      <div class="brand-txt"><b>La Révolution française et l'Empire</b><span>4e · Histoire · 1789-1815 · Révisions</span>
+        <div class="chips"><span class="chip">${ico("pin",13)} Collège Plan Menu · Coublevie · 4e</span><span class="chip">${ico("user",13)} Jeanne Cador · Enseignante</span></div></div></div>
+    <div class="navbtns"><button class="ghost" id="toBadges">${ico("medal",16)} Badges et bilan</button></div>
+  </header>
+
+  ${due ? `<div class="review-banner"><p><b>${due} carte${due > 1 ? "s" : ""} à revoir aujourd'hui.</b> Ce sont celles que vous ne saviez pas : revoyez-les pour bien les retenir.</p><button class="go" id="goDue">${ico("loop",18)} Les revoir</button></div>` : ""}
+
+  <section class="dash fade-in" aria-label="Votre progression">
+    <div class="player">
+      <div class="lvl" title="Niveau ${lv.n} sur ${LEVELS.length}">${lv.n}<small>NIV.</small></div>
+      <div class="pinfo">
+        <div class="pname"><h2>${esc(lv.name)}</h2></div>
+        <div class="xpbar"><i style="width:${pct(lv.p)}%"></i></div>
+        <div class="xptxt"><span>${S.xp} XP</span><span>${lv.next ? "niveau suivant : " + pct(lv.next) + " % du chapitre" : "niveau maximum"}</span></div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat ready"><b>${pct(g)} %</b><span>du chapitre maîtrisé</span></div>
+      <div class="stat"><b>${acquired}<small class="muted" style="font-size:16px">/${CARDS.length}</small></b><span>cartes acquises</span></div>
+      <div class="stat fire"><b>${dayStreak()}</b><span>jour${dayStreak() > 1 ? "s" : ""} de révision d'affilée</span></div>
+      <div class="stat"><b>${nb}<small class="muted" style="font-size:16px">/${BADGES.length}</small></b><span>badges gagnés</span></div>
+    </div>
+  </section>
+
+  <section class="how" aria-label="Comment ça marche">
+    <h3>Comment ça marche ?</h3>
+    <ol>
+      <li><span><b>Choisissez</b> dates, définitions ou les deux.</span></li>
+      <li><span><b>Choisissez</b> un mode : flip cards, QCM, frise ou interrogation blanche.</span></li>
+      <li><span><b>Retournez la carte</b>, puis glissez-la : à droite si vous saviez, à gauche sinon.</span></li>
+      <li><span><b>Les cartes non sues reviennent</b> le lendemain, jusqu'à ce que vous les sachiez.</span></li>
+    </ol>
+    <p>Révisez un peu à chaque cours, au fur et à mesure. Chaque bonne réponse rapporte des points (XP) ; quelques badges sont à gagner.</p>
+  </section>
+
+  <div class="sec-title"><h3><span class="stepn">1</span>Ce que je révise</h3><span class="muted" style="font-size:14px">pour les flip cards et le défi QCM</span></div>
+  <div class="types">
+    ${TY.map(k => { const t = TYPES[k]; return `<button class="ty" style="--c:${t.color}" aria-pressed="${S.types.includes(k)}" data-k="${k}">${ico(t.icon,20)}<span>${esc(t.label)}</span><b>${tCount(k)}</b><span class="tchk"></span></button>`; }).join("")}
+  </div>
+
+  <div class="sec-title"><h3><span class="stepn">2</span>Le mode de révision</h3><span class="muted" style="font-size:14px">${p.length} cartes</span></div>
+  <div class="modes${none ? " off" : ""}">
+    <div class="mode">
+      <h4>${ico("flip",22)} Flip cards</h4>
+      <p>Lisez la question, cherchez la réponse dans votre tête, retournez la carte. Puis glissez-la à droite (je sais) ou à gauche (je ne sais pas).</p>
+      <div class="seg" role="group" aria-label="Nombre de cartes">${sizes.map(s => `<button data-size="${s}" aria-pressed="${String(S.size) === String(s)}">${s}</button>`).join("")}</div>
+      <button class="go" id="goFlip" ${p.length ? "" : "disabled"}>Commencer ${ico("arrow",18)}</button>
+      ${noType ? `<p class="small-warn">Choisissez d'abord dates ou définitions (étape 1).</p>` : ""}
+    </div>
+    <div class="mode">
+      <h4>${ico("quiz",22)} Défi QCM</h4>
+      <p>10 questions à choix multiples, corrigées tout de suite. Prenez votre temps : pas de limite, et un petit bonus si vous répondez en moins de 30 secondes.</p>
+      <button class="go alt" id="goQcm" ${p.length >= 4 ? "" : "disabled"}>Lancer le défi ${ico("arrow",18)}</button>
+    </div>
+    <div class="mode">
+      <h4>${ico("timeline",22)} Frise chronologique</h4>
+      <p>Associez dates et événements, complétez la frise du cours, ou rangez les caractéristiques de chaque régime.</p>
+      <button class="go alt" id="goFrise" ${none ? "disabled" : ""}>Construire la frise ${ico("arrow",18)}</button>
+    </div>
+    <div class="mode exam">
+      <h4>${ico("clock",22)} Interrogation blanche</h4>
+      <span class="veille">À faire juste avant l'interrogation</span>
+      <p>Comme le jour J : 10 dates à écrire (dont la mort du roi, la Terreur, le coup d'État, le sacre et Waterloo), les périodes des 4 régimes, les définitions du cours et 2 questions sur les caractéristiques des régimes. Sans correction pendant l'épreuve. À la fin : votre note sur 20 et le corrigé.</p>
+      <button class="go" id="goExam">Commencer ${ico("arrow",18)}</button>
+      <p class="small-warn">Porte sur tout le chapitre.</p>
+    </div>
+  </div>
+
+  <div class="sec-title"><h3>Vos badges</h3><button class="linkbtn" id="toBadges2">Voir le détail</button></div>
+  <div class="badge-strip">
+    ${BADGES.map(b => `<div class="medal${S.badges[b.id] ? "" : " locked"}" title="${esc(b.desc)}"><div class="disc">${ico(b.icon,30)}</div><span>${esc(b.name)}</span></div>`).join("")}
+  </div>
+  <p class="foot">Votre progression est enregistrée dans ce navigateur, sur cet appareil.</p>`;
+
+  app.querySelectorAll(".theme").forEach(b => b.onclick = () => {
+    const t = b.dataset.t; S.sel = S.sel.includes(t) ? S.sel.filter(x => x !== t) : TH.filter(x => x === t || S.sel.includes(x)); save(); keepScroll(home);
+  });
+  app.querySelectorAll(".ty").forEach(b => b.onclick = () => {
+    const k = b.dataset.k; S.types = S.types.includes(k) ? S.types.filter(x => x !== k) : TY.filter(x => x === k || S.types.includes(x)); save(); keepScroll(home);
+  });
+  const at = $("#allThemes"); if (at) at.onclick = () => { S.sel = S.sel.length === TH.length ? [] : TH.slice(); save(); keepScroll(home); };
+  app.querySelectorAll("[data-size]").forEach(b => b.onclick = () => { S.size = b.dataset.size === "Tout" ? "Tout" : +b.dataset.size; save(); keepScroll(home); });
+  $("#goFlip").onclick = () => startFlip(pick(p, S.size === "Tout" ? p.length : S.size).map(c => c.id));
+  $("#goQcm").onclick = startQcm;
+  $("#goFrise").onclick = friseMenu;
+  $("#goExam").onclick = startExam;
+  $("#toBadges").onclick = $("#toBadges2").onclick = badgesView;
+  const gd = $("#goDue"); if (gd) gd.onclick = () => startFlip(shuffle(dueIds()));
+}
+
+/* =========================================================
+   FLIP CARDS À GLISSER
+   ========================================================= */
+let F = null;
+function startFlip(ids){
+  if (!ids.length) return;
+  F = {queue: ids.slice(), total: ids.length, done: 0, i: 0, flipped: false, combo: 0, xp0: S.xp, res: {}, requeue: {}, busy: false};
+  view = "flip"; renderFlip(); window.scrollTo(0, 0);
+}
+function boxDots(id){
+  const b = box(id); let h = "";
+  for (let i = 1; i <= 5; i++) h += `<i class="${i <= b ? "on" : ""}"></i>`;
+  return `<span class="fbox" title="Niveau de la carte : ${b}/5">${h}</span>`;
+}
+function frontHtml(c){
+  const kc = TYPES[c.ty].color;
+  if (c.ty === "car") return `<div class="qwrap"><span class="qk" style="--kc:${kc}">${ico("crown",15)} Donnez les caractéristiques</span><div class="q">${esc(c.w)}</div><span class="yrsb">${esc(c.yrs)}</span></div>`;
+  if (c.ty === "dat") return `<div class="qwrap"><span class="qk" style="--kc:${kc}">${ico("cal",15)} ${c.per ? "Donnez les dates de la période" : "Donnez la date"}</span><div class="q">${esc(c.e)}</div></div>`;
+  return `<div class="qwrap"><span class="qk" style="--kc:${kc}">${ico("book",15)} Donnez la définition</span><div class="q">${esc(c.w)}</div></div>`;
+}
+function backHtml(c){
+  if (c.ty === "car") return `<p class="qback">${esc(c.w)} · ${esc(c.yrs)}</p><div class="ans-label">Caractéristiques</div><ul class="clist">${c.c.map(x => `<li>${esc(x)}</li>`).join("")}</ul>${c.d ? `<div class="det">${c.d}</div>` : ""}`;
+  if (c.ty === "dat") return `<p class="qback">${esc(c.e)}</p><div class="ans-label">${c.per ? "Dates" : "Date"}</div><div class="ans big">${esc(c.w)}</div>${c.d ? `<div class="det">${c.d}</div>` : ""}`;
+  return `<p class="qback">${esc(c.w)}</p><div class="ans-label">Définition</div><div class="ans">${esc(c.a)}</div>${c.d ? `<div class="det">${c.d}</div>` : ""}`;
+}
+function renderFlip(){
+  if (F.i >= F.queue.length) return endFlip();
+  const c = byId[F.queue[F.i]], th = THEMES[c.t];
+  F.flipped = false; F.busy = false;
+  app.innerHTML = `
+  <div class="sess-head">
+    <button class="ghost" id="quit" aria-label="Retour à l'accueil">${ico("back",16)}</button>
+    <div class="prog" aria-hidden="true"><i style="width:${pct(F.done / F.total)}%"></i></div>
+    <span class="sess-count">${F.done}/${F.total}</span>
+    <span class="combo" id="combo">${F.combo >= 2 ? "×" + F.combo : ""}</span>
+  </div>
+  <div class="stage fade-in">
+    <div class="swipe" id="sw">
+      <span class="sstamp ok" id="stOk">Je sais</span><span class="sstamp ko" id="stKo">Je ne sais pas</span>
+      <div class="flip" id="flip" tabindex="0" role="button" aria-label="Retourner la carte">
+        <div class="face front" style="--c:${th.color}">
+          <div class="fhead"><span class="ftag">${esc(tagOf(c))}</span>${boxDots(c.id)}</div>
+          <div class="ruled">${frontHtml(c)}<div class="hint">Touchez la carte pour la retourner</div></div>
+        </div>
+        <div class="face back" style="--c:${th.color}">
+          <div class="fhead"><span class="ftag">Corrigé · ${esc(tagOf(c))}</span>${boxDots(c.id)}</div>
+          <div class="ruled">${backHtml(c)}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="actions"><button class="go reveal" id="reveal">${ico("flip",18)} Retourner la carte</button></div>
+  <p class="keys">Espace : retourner · flèche droite : je sais · flèche gauche : je ne sais pas</p>`;
+  $("#quit").onclick = () => { save(); home(); };
+  $("#reveal").onclick = doFlip;
+  bindSwipe();
+}
+function doFlip(){
+  if (view !== "flip" || F.busy) return;
+  F.flipped = !F.flipped;
+  $("#flip").classList.toggle("flipped", F.flipped);
+  if (F.flipped && !$("#sbtns")) {
+    $("#actions").innerHTML = `<div class="sbtns" id="sbtns">
+      <button class="sb-ko" data-r="0">${ico("back",20)} Je ne sais pas</button>
+      <button class="sb-ok" data-r="1">Je sais ${ico("arrow",20)}</button></div>
+      <p class="swipehint">ou glissez la carte : <b style="color:var(--ko)">← je ne sais pas</b> · <b style="color:var(--ok)">je sais →</b></p>`;
+    app.querySelectorAll("[data-r]").forEach(b => b.onclick = e => { e.stopPropagation(); fly(b.dataset.r === "1"); });
+  }
+}
+function bindSwipe(){
+  const sw = $("#sw"), stOk = $("#stOk"), stKo = $("#stKo");
+  let st = null;
+  const setStamp = dx => {
+    const k = Math.min(1, Math.abs(dx) / 110);
+    stOk.style.opacity = dx > 0 && F.flipped ? k : 0;
+    stKo.style.opacity = dx < 0 && F.flipped ? k : 0;
+  };
+  sw.addEventListener("pointerdown", e => {
+    if (F.busy || (e.pointerType === "mouse" && e.button !== 0)) return;
+    st = {x: e.clientX, y: e.clientY, dx: 0, drag: false, id: e.pointerId};
+    sw.classList.remove("anim");
+  });
+  sw.addEventListener("pointermove", e => {
+    if (!st || e.pointerId !== st.id) return;
+    const dx = e.clientX - st.x, dy = e.clientY - st.y;
+    if (!st.drag && Math.abs(dx) > 10 && Math.abs(dx) > Math.abs(dy)) { st.drag = true; try { sw.setPointerCapture(e.pointerId); } catch(_) {} }
+    if (!st.drag) return;
+    st.dx = F.flipped ? dx : dx * .25; // avant de retourner, la carte résiste
+    sw.style.transform = `translateX(${st.dx}px) rotate(${st.dx / 20}deg)`;
+    setStamp(st.dx);
+  });
+  const end = e => {
+    if (!st || (e && e.pointerId !== st.id)) return;
+    const s = st; st = null;
+    if (!s.drag) { if (e && e.type === "pointerup") doFlip(); return; }
+    const lim = Math.min(120, sw.offsetWidth * .28);
+    if (F.flipped && Math.abs(s.dx) > lim) { fly(s.dx > 0); return; }
+    sw.classList.add("anim"); sw.style.transform = ""; setStamp(0);
+    if (!F.flipped && Math.abs(s.dx) > 20) { const h = sw.querySelector(".front .hint"); if (h) { h.textContent = "Retournez d'abord la carte pour vérifier !"; h.style.color = "var(--mid)"; } }
+  };
+  sw.addEventListener("pointerup", end);
+  sw.addEventListener("pointercancel", end);
+}
+function fly(ok){
+  if (view !== "flip" || F.busy) return;
+  if (!F.flipped) { doFlip(); return; }
+  F.busy = true;
+  const sw = $("#sw");
+  $(ok ? "#stOk" : "#stKo").style.opacity = 1;
+  if (reduced()) { rateFlip(ok); return; }
+  sw.classList.add("anim");
+  sw.style.transform = `translateX(${ok ? 130 : -130}vw) rotate(${ok ? 24 : -24}deg)`;
+  setTimeout(() => rateFlip(ok), 300);
+}
+function rateFlip(ok){
+  const id = F.queue[F.i];
+  grade(id, ok);
+  if (!(id in F.res)) F.res[id] = ok;
+  let gain;
+  if (ok) { F.combo++; S.bestStreak = Math.max(S.bestStreak, F.combo); gain = 10 + Math.min(F.combo - 1, 5) * 2; }
+  else { F.combo = 0; gain = 1; }
+  addXP(gain);
+  const n = F.requeue[id] || 0;
+  if (!ok && n < 2) { F.queue.splice(Math.min(F.queue.length, F.i + 4), 0, id); F.requeue[id] = n + 1; }
+  if (!F.queue.slice(F.i + 1).includes(id)) F.done++;
+  F.i++;
+  save(); checkBadges();
+  renderFlip();
+  if (F.combo >= 2) { const el = $("#combo"); if (el) el.classList.add("pop"); }
+}
+function cardLine(c){ return c.ty === "dat" ? c.e : c.ty === "car" ? "Caractéristiques : " + c.w : c.w; }
+function cardAns(c){ return c.ty === "dat" ? c.w : c.ty === "car" ? c.c.join(" ; ") : c.a; }
+function missList(ids){
+  return `<div class="miss">${ids.map(i => { const c = byId[i], th = THEMES[c.t]; return `<details style="--c:${th.color}"><summary><span class="ftag">${esc(tagOf(c))}</span>${esc(cardLine(c))}</summary><p><b>${esc(cardAns(c))}</b></p>${c.d ? `<div style="margin-top:6px">${c.d}</div>` : ""}</details>`; }).join("")}</div>`;
+}
+function endFlip(){
+  view = "end"; track("session-flipcards"); report("Flip cards");
+  const ids = Object.keys(F.res);
+  const ko = ids.filter(i => !F.res[i]), ok = ids.filter(i => F.res[i]);
+  const r = ids.length ? ok.length / ids.length : 0;
+  const msg = r === 1 ? "Parfait !" : r >= .7 ? "Très bien !" : r >= .4 ? "Bon travail" : "Continuez !";
+  app.innerHTML = `
+  <div class="endcard fade-in">
+    <div><span class="ftag" style="color:var(--accent)">Session terminée</span><h2>${msg}</h2></div>
+    <div class="endstats">
+      <div class="stat"><b class="o">${ok.length}</b><span>sues du premier coup</span></div>
+      <div class="stat"><b class="k">${ko.length}</b><span>à retravailler</span></div>
+      <div class="stat"><b class="x">+${S.xp - F.xp0}</b><span>XP gagnés</span></div>
+      <div class="stat"><b>${pct(mastery(CARDS))} %</b><span>du chapitre maîtrisé</span></div>
+    </div>
+    ${ko.length ? `<div><h3 class="h3s">À retenir</h3>${missList(ko)}</div>` : ""}
+    <div class="row">
+      ${ko.length ? `<button class="go" id="again">${ico("loop",18)} Rejouer ces ${ko.length} cartes</button>` : ""}
+      <button class="go alt" id="more">Nouvelle session</button>
+      <button class="go alt" id="back">Accueil</button>
+    </div>
+  </div>`;
+  if (ko.length) $("#again").onclick = () => startFlip(shuffle(ko));
+  $("#more").onclick = () => { const p = pool(); if (p.length) startFlip(pick(p, S.size === "Tout" ? p.length : S.size).map(c => c.id)); else home(); };
+  $("#back").onclick = home;
+  if (r === 1 && ids.length >= 5) confetti();
+  window.scrollTo(0, 0);
+}
+
+/* =========================================================
+   DÉFI QCM
+   ========================================================= */
+let Q = null, timerRAF = 0;
+function stopTimer(){ cancelAnimationFrame(timerRAF); }
+function startQcm(){
+  const list = pick(pool(), 10);
+  if (list.length < 4) return;
+  Q = {list: list.map(c => makeQ(c)), i: 0, score: 0, xp0: S.xp, wrong: []};
+  view = "qcm"; renderQcm(); window.scrollTo(0, 0);
+}
+function qHead(it, tag, right){
+  const c = it.c, th = THEMES[c.t];
+  return `<div class="face fade-in" style="--c:${th.color};min-height:0">
+    <div class="fhead"><span class="ftag">${tag} · ${esc(tagOf(c))}</span><span class="fbox">${right}</span></div>
+    ${tag === "Défi" ? `<div class="timer"><i id="tbar"></i></div>` : ""}
+    <div class="ruled" style="padding-block:14px"><div class="q ${it.small ? "qsmall" : ""}" style="padding-block:4px;font-size:clamp(19px,3vw,24px)">${it.prompt}</div></div>
+  </div>`;
+}
+function renderQcm(){
+  if (Q.i >= Q.list.length) return endQcm();
+  const it = Q.list[Q.i], c = it.c;
+  app.innerHTML = `
+  <div class="sess-head">
+    <button class="ghost" id="quit" aria-label="Retour à l'accueil">${ico("back",16)}</button>
+    <div class="prog" aria-hidden="true"><i style="width:${pct(Q.i / Q.list.length)}%"></i></div>
+    <span class="sess-count">${Q.i + 1}/${Q.list.length}</span>
+    <span class="combo">${Q.score} pt${Q.score > 1 ? "s" : ""}</span>
+  </div>
+  ${qHead(it, "Défi", "bonus si moins de 30 s")}
+  <div class="qcm-opts">${it.opts.map((o, i) => `<button class="opt" data-ok="${o === it.good ? 1 : 0}"><span class="l">${"ABCD"[i]}</span><span>${esc(o)}</span></button>`).join("")}</div>
+  <div id="fb"></div>`;
+  $("#quit").onclick = () => { stopTimer(); save(); home(); };
+  const t0 = performance.now(), LIM = 30000; // 30 secondes pour le bonus, sans limite pour répondre
+  stopTimer();
+  (function tk(){ const e = performance.now() - t0, bar = $("#tbar"); if (!bar) return; bar.style.width = Math.max(0, 100 - e / LIM * 100) + "%"; if (e < LIM) timerRAF = requestAnimationFrame(tk); })();
+  app.querySelectorAll(".opt").forEach(b => b.onclick = () => {
+    stopTimer();
+    const fast = performance.now() - t0 < LIM, ok = b.dataset.ok === "1";
+    app.querySelectorAll(".opt").forEach(x => { x.disabled = true; if (x.dataset.ok === "1") x.classList.add("good"); });
+    if (!ok) b.classList.add("bad");
+    grade(c.id, ok);
+    if (ok) { Q.score++; addXP(12 + (fast ? 5 : 0)); } else Q.wrong.push(c.id);
+    save();
+    $("#fb").innerHTML = `<div class="feedback ${ok ? "" : "ko"} fade-in"><b class="v" style="color:${ok ? "var(--ok)" : "var(--ko)"}">${ok ? (fast ? "Bonne réponse, et rapide !" : "Bonne réponse") : "Pas tout à fait"}</b>
+      <div><b>${esc(cardLine(c))} : ${esc(cardAns(c))}</b></div>${c.d ? `<div style="margin-top:4px">${c.d}</div>` : ""}</div>
+      <button class="go" id="next" style="width:100%;margin-top:12px">${Q.i + 1 < Q.list.length ? "Question suivante" : "Voir mon score"} ${ico("arrow",18)}</button>`;
+    $("#next").onclick = () => { Q.i++; renderQcm(); };
+    $("#next").focus({preventScroll:true});
+    checkBadges();
+  });
+}
+function endQcm(){
+  view = "end"; track("session-qcm"); report("QCM");
+  const perfect = Q.score === Q.list.length && Q.list.length >= 10;
+  if (perfect) addXP(30);
+  save(); checkBadges();
+  app.innerHTML = `
+  <div class="endcard fade-in">
+    <div><span class="ftag" style="color:var(--accent)">Défi QCM terminé</span><h2>${Q.score}/${Q.list.length}${perfect ? " · Sans faute !" : ""}</h2></div>
+    <div class="endstats">
+      <div class="stat"><b class="o">${Q.score}</b><span>bonnes réponses</span></div>
+      <div class="stat"><b class="k">${Q.wrong.length}</b><span>erreurs</span></div>
+      <div class="stat"><b class="x">+${S.xp - Q.xp0}</b><span>XP gagnés</span></div>
+      <div class="stat"><b>${pct(mastery(CARDS))} %</b><span>du chapitre maîtrisé</span></div>
+    </div>
+    ${Q.wrong.length ? `<div><h3 class="h3s">Corrigé de vos erreurs</h3>${missList(Q.wrong)}</div>` : ""}
+    <div class="row">
+      ${Q.wrong.length ? `<button class="go" id="again">${ico("flip",18)} Retravailler mes erreurs en flip cards</button>` : ""}
+      <button class="go alt" id="more">Nouveau défi</button>
+      <button class="go alt" id="back">Accueil</button>
+    </div>
+  </div>`;
+  if (Q.wrong.length) $("#again").onclick = () => startFlip(shuffle(Q.wrong));
+  $("#more").onclick = startQcm;
+  $("#back").onclick = home;
+  if (perfect) confetti();
+  window.scrollTo(0, 0);
+}
+
+/* =========================================================
+   FRISE CHRONOLOGIQUE
+   ========================================================= */
+function friseMenu(){
+  view = "frisepick";
+  const bo = (S.best || {}).asso, br = (S.best || {}).frise2, pol = true;
+  app.innerHTML = `<div class="sess-head"><button class="ghost" id="quit" aria-label="Retour à l'accueil">${ico("back",16)}</button></div>
+  <div class="face fade-in" style="--c:var(--k-dat);min-height:0"><div class="fhead"><span class="ftag">Frise chronologique</span><span class="fbox">tout le chapitre</span></div>
+    <div class="ruled" style="padding-block:14px"><div class="q qsmall">Quel exercice voulez-vous faire ?</div></div></div>
+  <div class="pick">
+    <button class="pickcard" id="pAsso"><b>${ico("cal",22)} Associer la date et l'événement</b><span>Toutes les dates du chapitre : faites glisser chaque date sur le bon événement ou la bonne période. Ensuite, la frise corrigée.</span>${bo != null ? `<span class="fbox">meilleur score : ${bo}/${ASSO_N}</span>` : ""}</button>
+    <button class="pickcard" id="pReg" ${pol ? "" : "disabled"}><b>${ico("bars",22)} La frise du cours</b><span>${pol ? "Comme sur votre fiche : les 4 régimes de 1789 à 1815, les causes de chaque changement et les événements importants de la République." : "Choisissez d'abord la partie « Une révolution politique »."}</span>${br != null && pol ? `<span class="fbox">meilleur score : ${br}/${FR_TOTAL}</span>` : ""}</button>
+    <button class="pickcard" id="pTri"><b>${ico("crown",22)} Les caractéristiques des régimes</b><span>Rangez chaque caractéristique dans le bon régime : monarchie absolue, monarchie constitutionnelle, République ou Empire.</span>${(S.best || {}).tri != null ? `<span class="fbox">meilleur score : ${S.best.tri}/${TRI.length}</span>` : ""}</button>
+  </div>`;
+  $("#quit").onclick = home;
+  $("#pAsso").onclick = startAsso;
+  if (pol) $("#pReg").onclick = startRegimes;
+  $("#pTri").onclick = startTri;
+  window.scrollTo(0, 0);
+}
+
+/* --- Glisser-déposer commun : étiquettes [data-l], cases [data-drop] ; DD = {sel, place(label, case), render()} --- */
+let DD = null;
+function ddRender(){ const fs = $("#fscroll"), x = fs ? fs.scrollLeft : 0; keepScroll(DD.render); const f2 = $("#fscroll"); if (f2) f2.scrollLeft = x; }
+function ddPlace(l, t){ DD.sel = null; DD.place(l, t); ddRender(); }
+function bindDrag(){
+  const under = (x, y) => { const el = document.elementFromPoint(x, y); return el && el.closest("[data-drop]"); };
+  app.querySelectorAll("[data-drop]").forEach(z => z.addEventListener("click", e => { if (!e.target.closest("[data-l]") && DD.sel) ddPlace(DD.sel, z.dataset.drop); }));
+  app.querySelectorAll("[data-l]").forEach(ch => {
+    ch.addEventListener("pointerdown", e => {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      e.preventDefault();
+      const sx = e.clientX, sy = e.clientY; let gh = null, moved = false;
+      const fs = $("#fscroll");
+      const mv = ev => {
+        if (!moved && Math.hypot(ev.clientX - sx, ev.clientY - sy) > 6) {
+          moved = true; gh = ch.cloneNode(true); gh.classList.add("dragghost"); gh.classList.remove("sel");
+          document.body.appendChild(gh); ch.classList.add("dragging");
+        }
+        if (!moved) return;
+        gh.style.left = ev.clientX + "px"; gh.style.top = ev.clientY + "px";
+        if (ev.clientY < 70) scrollBy(0, -14); else if (ev.clientY > innerHeight - 70) scrollBy(0, 14);
+        if (fs) { const r = fs.getBoundingClientRect(); if (ev.clientY > r.top && ev.clientY < r.bottom) { if (ev.clientX < r.left + 40) fs.scrollLeft -= 12; else if (ev.clientX > r.right - 40) fs.scrollLeft += 12; } }
+        const t = under(ev.clientX, ev.clientY);
+        app.querySelectorAll("[data-drop]").forEach(z => z.classList.toggle("hover", z === t));
+      };
+      const up = ev => {
+        removeEventListener("pointermove", mv); removeEventListener("pointerup", up); removeEventListener("pointercancel", up);
+        if (!moved) { // simple toucher : étiquette de la liste = sélection ; étiquette placée = retour dans la liste (ou échange)
+          const home_ = ch.closest("[data-drop]").dataset.drop;
+          if (home_ === "bank") { DD.sel = DD.sel === ch.dataset.l ? null : ch.dataset.l; ddRender(); }
+          else if (DD.sel) ddPlace(DD.sel, home_);
+          else ddPlace(ch.dataset.l, "bank");
+          return;
+        }
+        gh.remove(); ch.classList.remove("dragging");
+        const t = ev.type === "pointerup" ? under(ev.clientX, ev.clientY) : null;
+        if (t) ddPlace(ch.dataset.l, t.dataset.drop); else ddRender();
+      };
+      addEventListener("pointermove", mv); addEventListener("pointerup", up); addEventListener("pointercancel", up);
+    });
+  });
+}
+const lblHtml = (l, cls) => `<span class="lbl${cls || ""}${DD && DD.sel === l ? " sel" : ""}" data-l="${esc(l)}">${esc(l)}</span>`;
+
+/* --- Associer la date et l'événement --- */
+const ASSO_N = DATES.length; // toutes les dates du chapitre, périodes comprises
+let A = null;
+function startAsso(){
+  const out = DATES.slice();
+  A = {items: shuffle(out), placed: {}, checked: false, bank: shuffle(out.map(d => d.w)), xp0: S.xp};
+  DD = {sel: null, render: renderAsso, place: (l, t) => {
+    for (const k in A.placed) if (A.placed[k] === l) delete A.placed[k];
+    if (t !== "bank") A.placed[t] = l; // la date déjà posée sur l'événement retourne dans la liste
+  }};
+  view = "asso"; renderAsso(); window.scrollTo(0, 0);
+}
+function renderAsso(){
+  const n = A.items.length, used = Object.values(A.placed), left = A.bank.filter(l => !used.includes(l));
+  const ok = d => A.placed[d.id] === d.w, score = A.items.filter(ok).length;
+  app.innerHTML = `
+  <div class="sess-head">
+    <button class="ghost" id="quit" aria-label="Retour">${ico("back",16)}</button>
+    <div class="prog" aria-hidden="true"><i style="width:${pct(used.length / n)}%"></i></div>
+    <span class="sess-count">${used.length}/${n}</span><span class="combo"></span>
+  </div>
+  <div class="face fade-in" style="--c:var(--k-dat);min-height:0"><div class="fhead"><span class="ftag">Associer la date et l'événement</span><span class="fbox">${n} événements</span></div>
+    <div class="ruled" style="padding-block:14px"><div class="q qsmall">${A.checked ? (score === n ? "Tout est juste !" : score + "/" + n + " dates bien placées") : "Faites glisser chaque date sur le bon événement."}</div></div></div>
+  <div class="asso">
+    ${A.items.map(d => { const v = A.placed[d.id], st = A.checked ? (ok(d) ? " good" : " bad") : "";
+      return `<div class="arow${st}"><p>${esc(d.e)}${A.checked && !ok(d) ? `<span class="fcorr">→ ${esc(d.w)}</span>` : ""}</p><div class="fdrop adrop" data-drop="${d.id}">${v ? (A.checked ? `<b>${esc(v)}</b>` : lblHtml(v, " dlbl")) : ""}</div></div>`; }).join("")}
+  </div>
+  ${A.checked ? `<div class="feedback ${score === n ? "" : "ko"} fade-in"><b class="v" style="color:${score === n ? "var(--ok)" : "var(--ko)"}">La frise corrigée</b>
+      <div class="timeline">${A.items.slice().sort((a, b) => a.key < b.key ? -1 : 1).map(d => `<div class="tl" style="--c:var(--k-dat)"><b>${esc(d.w)}</b>${esc(d.e)}</div>`).join("")}</div></div>
+    <div class="row" style="margin-top:14px"><button class="go" id="again">${ico("loop",18)} Nouvelle série</button><button class="go alt" id="menu">Autre exercice</button><button class="go alt" id="back">Accueil</button></div>`
+  : `<div class="bank fbank sbank" data-drop="bank" data-empty="Toutes les dates sont placées : cliquez sur « Vérifier ».">${left.map(l => lblHtml(l, " dlbl")).join("")}</div>
+     <p class="muted" style="font-size:13px;margin:8px 0 0">Pour corriger, faites glisser une date vers un autre événement ou vers la liste. Sans glisser : touchez une date, puis l'événement.</p>
+     <div class="row" style="margin-top:12px"><button class="go" id="check" ${used.length < n ? "disabled" : ""}>Vérifier ${ico("arrow",18)}</button></div>`}`;
+  $("#quit").onclick = friseMenu;
+  if (A.checked) { $("#again").onclick = startAsso; $("#menu").onclick = friseMenu; $("#back").onclick = home; return; }
+  bindDrag();
+  $("#check").onclick = () => {
+    A.checked = true;
+    const sc = A.items.filter(ok).length, perfect = sc === n;
+    A.items.forEach(d => grade(d.id, ok(d)));
+    S.best = S.best || {}; S.best.asso = Math.max(S.best.asso || 0, sc);
+    addXP(sc * 4 + (perfect ? 15 : 0)); if (perfect) confetti();
+    track("session-association"); report("Associer date et événement");
+    save(); checkBadges({chrono: perfect}); keepScroll(renderAsso);
+  };
+}
+
+/* --- La frise du cours : même sens que la fiche, une étiquette par événement --- */
+let R = null;
+function startRegimes(){
+  R = {placed: {}, checked: false, bank: shuffle(FR_REG.map(r => r.n).concat(FR_EVTS.map(e => e.n))), xp0: S.xp};
+  // placed : étiquette → case (r0 à r3 pour les régimes, z0… pour les événements)
+  DD = {sel: null, render: renderRegimes, place: (l, t) => {
+    if (t === "bank") { delete R.placed[l]; return; }
+    if (t[0] === "r") for (const k in R.placed) if (R.placed[k] === t) delete R.placed[k]; // une case de régime ne prend qu'une étiquette
+    R.placed[l] = t;
+  }};
+  view = "regimes"; renderRegimes(); window.scrollTo(0, 0);
+}
+function renderRegimes(){
+  const n = FR_TOTAL, used = Object.keys(R.placed).length, left = R.bank.filter(l => !R.placed[l]);
+  const isReg = l => FR_REG.some(r => r.n === l);
+  const right = l => { const t = R.placed[l]; if (!t) return false; const r = FR_REG.findIndex(x => x.n === l); return r >= 0 ? t === "r" + r : FR_EVTS.find(e => e.n === l).z === t; };
+  const score = R.bank.filter(right).length;
+  const inBox = t => R.bank.filter(l => R.placed[l] === t);
+  const chip = l => R.checked ? `<span class="fres ${right(l) ? "ok" : "ko"}">${esc(l)}${!isReg(l) ? `<small>${esc(FR_EVTS.find(e => e.n === l).dt)}</small>` : ""}</span>` : lblHtml(l, isReg(l) ? "" : " cause");
+  const missing = t => R.checked ? FR_EVTS.filter(e => e.z === t && R.placed[e.n] !== t).map(e => `<span class="fcorr">→ ${esc(e.n)} (${esc(e.dt)})</span>`).join("") : "";
+  app.innerHTML = `
+  <div class="sess-head">
+    <button class="ghost" id="quit" aria-label="Retour">${ico("back",16)}</button>
+    <div class="prog" aria-hidden="true"><i style="width:${pct(used / n)}%"></i></div>
+    <span class="sess-count">${used}/${n}</span><span class="combo"></span>
+  </div>
+  <div class="face fade-in" style="--c:var(--c-pol);min-height:0"><div class="fhead"><span class="ftag">La frise du cours</span><span class="fbox">régimes, causes et événements</span></div>
+    <div class="ruled" style="padding-block:14px"><div class="q qsmall">${R.checked ? (score === n ? "Frise parfaite !" : score + "/" + n + " étiquettes bien placées") : "Faites glisser chaque étiquette : le régime sous sa période, chaque événement dans la bonne case."}</div></div></div>
+  <div class="fscroll" id="fscroll"><div class="fgrid">
+    ${FR_REG.map((r, j) => `<div class="chev" style="grid-column:${2 * j + 1} / span 2;grid-row:1;--rc:${r.c}">${esc(r.yrs)}</div>`).join("")}
+    ${FR_REG.map((r, j) => { const ls = inBox("r" + j), st = R.checked ? (ls.length && right(ls[0]) ? " good" : " bad") : "";
+      return `<div class="fslot reg${st}" style="grid-column:${2 * j + 1} / span 2;grid-row:2;border-top-color:${r.c}"><span class="fcap">Nom du régime</span><div class="fdrop" data-drop="r${j}">${ls.map(chip).join("")}</div>${R.checked && !(ls.length && right(ls[0])) ? `<span class="fcorr">→ ${esc(r.n)}</span>` : ""}</div>`; }).join("")}
+    ${FR_ZONES.map(z => { const ls = inBox(z.id), st = R.checked ? (ls.every(right) && !FR_EVTS.some(e => e.z === z.id && R.placed[e.n] !== z.id) ? " good" : " bad") : "";
+      return `<div class="fslot cau${z.id === "zr" ? " evts" : ""}${st}" style="grid-column:${z.col};grid-row:${z.row}"><span class="fcap">${ico(z.id === "zr" ? "pin" : "arrow",13)} ${esc(z.cap)}</span><div class="fdrop multi" data-drop="${z.id}">${ls.map(chip).join("")}</div>${missing(z.id)}</div>`; }).join("")}
+  </div></div>
+  <p class="muted fswipe">Sur téléphone, faites défiler la frise vers la droite pour voir toutes les périodes.</p>
+  ${R.checked ? `<div class="feedback ${score === n ? "" : "ko"} fade-in"><b class="v" style="color:${score === n ? "var(--ok)" : "var(--ko)"}">À retenir</b>
+      En 26 ans, la France change plusieurs fois de régime : la monarchie absolue jusqu'en 1789, la monarchie constitutionnelle de 1789 à 1792, la République de 1792 à 1804, puis le Premier Empire de 1804 à 1815.</div>
+    <div class="row" style="margin-top:14px"><button class="go" id="again">${ico("loop",18)} Recommencer</button><button class="go alt" id="menu">Autre exercice</button><button class="go alt" id="back">Accueil</button></div>`
+  : `<div class="bank fbank" data-drop="bank" data-empty="Toutes les étiquettes sont placées : cliquez sur « Vérifier ».">${left.map(l => lblHtml(l, isReg(l) ? "" : " cause")).join("")}</div>
+     <p class="muted" style="font-size:13px;margin:8px 0 0">Étiquettes pleines : les régimes. Étiquettes en pointillés : les événements. Une case d'événements peut en recevoir plusieurs. Sans glisser : touchez une étiquette, puis sa case.</p>
+     <div class="row" style="margin-top:12px"><button class="go" id="check" ${used < n ? "disabled" : ""}>Vérifier ${ico("arrow",18)}</button></div>`}`;
+  $("#quit").onclick = friseMenu;
+  if (R.checked) { $("#again").onclick = startRegimes; $("#menu").onclick = friseMenu; $("#back").onclick = home; return; }
+  bindDrag();
+  $("#check").onclick = () => {
+    R.checked = true;
+    const sc = R.bank.filter(right).length, perfect = sc === n;
+    S.best = S.best || {}; S.best.frise2 = Math.max(S.best.frise2 || 0, sc);
+    addXP(sc * 3 + (perfect ? 15 : 0)); if (perfect) confetti();
+    markDay(); track("session-frise-cours"); report("Frise du cours");
+    save(); checkBadges({chrono: perfect}); keepScroll(renderRegimes);
+  };
+}
+
+/* --- Trier les caractéristiques des régimes --- */
+let T = null;
+const RSHORT = ["Monarchie absolue", "Monarchie constitutionnelle", "République", "Empire"];
+function startTri(){ T = {order: shuffle(TRI.map((_, i) => i)), as: {}, checked: false, xp0: S.xp}; view = "tri"; renderTri(); window.scrollTo(0, 0); }
+function renderTri(){
+  const n = TRI.length, done = Object.keys(T.as).length, ok = i => TRI[i].r.includes(T.as[i]);
+  const score = T.checked ? TRI.filter((_, i) => ok(i)).length : 0;
+  app.innerHTML = `
+  <div class="sess-head">
+    <button class="ghost" id="quit" aria-label="Retour">${ico("back",16)}</button>
+    <div class="prog" aria-hidden="true"><i style="width:${pct(done / n)}%"></i></div>
+    <span class="sess-count">${done}/${n}</span><span class="combo"></span>
+  </div>
+  <div class="face fade-in" style="--c:var(--c-eur);min-height:0"><div class="fhead"><span class="ftag">Les caractéristiques des régimes</span><span class="fbox">${n} caractéristiques</span></div>
+    <div class="ruled" style="padding-block:14px"><div class="q qsmall">${T.checked ? (score === n ? "Tout est bien rangé !" : score + "/" + n + " caractéristiques bien rangées") : "À quel régime correspond chaque caractéristique ?"}</div></div></div>
+  ${T.order.map(i => { const it = TRI[i], st = T.checked ? (ok(i) ? " right" : " wrong") : "";
+    const why = T.checked ? (ok(i) ? (it.w ? `<span class="why okw">${esc(it.w)}</span>` : "") : `<span class="why">→ ${esc(it.r.map(k => RSHORT[k]).join(" ou "))}${it.w ? ". " + esc(it.w) : ""}</span>`) : "";
+    return `<div class="idea${st}"><p>${esc(it.x)}${why}</p><div class="seg cats" role="group" aria-label="Régime">${RSHORT.map((r, k) => `<button data-i="${i}" data-k="${k}" aria-pressed="${T.as[i] === k}" ${T.checked ? "disabled" : ""}>${r}</button>`).join("")}</div></div>`; }).join("")}
+  ${T.checked ? `<div class="feedback ${score === n ? "" : "ko"} fade-in"><b class="v" style="color:${score === n ? "var(--ok)" : "var(--ko)"}">Le corrigé</b>
+      ${REGS.map(r => `<div style="margin-top:8px"><b>${esc(r.w)}</b> <span class="yrsb">(${esc(r.yrs)})</span><ul style="margin:2px 0 0;padding-left:20px">${r.c.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>
+    <div class="row" style="margin-top:14px"><button class="go" id="again">${ico("loop",18)} Recommencer</button><button class="go alt" id="menu">Autre exercice</button><button class="go alt" id="back">Accueil</button></div>`
+  : `<div class="row" style="margin-top:14px"><button class="go" id="check" ${done < n ? "disabled" : ""}>Vérifier ${ico("arrow",18)}</button></div>`}`;
+  $("#quit").onclick = friseMenu;
+  if (T.checked) { $("#again").onclick = startTri; $("#menu").onclick = friseMenu; $("#back").onclick = home; return; }
+  app.querySelectorAll("[data-k]").forEach(b => b.onclick = () => { T.as[+b.dataset.i] = +b.dataset.k; keepScroll(renderTri); });
+  $("#check").onclick = () => {
+    T.checked = true;
+    const sc = TRI.filter((_, i) => ok(i)).length, perfect = sc === n;
+    // chaque régime compte comme réussi si toutes ses caractéristiques sont bien rangées
+    REGS.forEach((r, k) => { const its = TRI.map((t, i) => [t, i]).filter(([t]) => t.r.length === 1 && t.r[0] === k); grade(r.id, its.every(([, i]) => ok(i))); });
+    S.best = S.best || {}; S.best.tri = Math.max(S.best.tri || 0, sc);
+    addXP(sc * 3 + (perfect ? 15 : 0)); if (perfect) confetti();
+    track("session-caracteristiques"); report("Caractéristiques des régimes");
+    save(); checkBadges(); keepScroll(renderTri);
+  };
+}
+
+/* =========================================================
+   INTERROGATION BLANCHE : 6 années à écrire + 6 définitions
+   ========================================================= */
+const EXAM_DATES = 10, EXAM_REGS = 2;
+/* Dates toujours demandées à l'interrogation blanche (les autres sont tirées au hasard) */
+const EXAM_MUST = ["pd9", "pp3", "pd11", "pd13", "ed11"]; // mort du roi, Terreur, coup d'État, sacre, Waterloo
+/* Périodes des régimes demandées à chaque fois */
+const EXAM_PER = ["pp0", "pp1", "pp2", "pp5"];
+const MOIS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+/* Date au jour près ? « 14 juillet 1789 », « Nuit du 4 août 1789 », « 20 et 21 juin 1791 » (20 ou 21 accepté) */
+function fullDate(c){
+  const m = c.w.match(new RegExp("((?:\\d{1,2}(?: et )?)+) (" + MOIS.join("|") + ") (\\d{4})", "i"));
+  return m ? {days: m[1].match(/\d{1,2}/g).map(Number), mo: MOIS.indexOf(m[2].toLowerCase()) + 1, y: +m[3]} : null;
+}
+let E = null, examTick = 0;
+function startExam(){
+  const th = S.sel.length ? S.sel : TH;
+  const spread = (list, n) => { // on répartit entre les parties choisies
+    const by = th.map(t => shuffle(list.filter(c => c.t === t))); const out = []; let k = 0, guard = 0;
+    while (out.length < n && guard++ < 200) { const b = by[k % by.length]; if (b.length) out.push(b.pop()); k++; }
+    return out;
+  };
+  // une date au jour près s'écrit en entier (jour, mois, année) ; sinon l'année ; une période : de … à …
+  const asItem = c => {
+    const cc = Object.assign({ty:"dat"}, c), r = c.w.match(/^(\d{4})-(\d{4})$/);
+    if (r) return {c: cc, kind:"range", rg:[+r[1], +r[2]]};
+    if (/^Jusqu'en (\d{4})$/.test(c.w)) return {c: cc, kind:"year", yy: +c.w.slice(-4), until: true};
+    const fd = fullDate(c); return fd ? {c: cc, kind:"full", fd} : {c: cc, kind:"year", yy: c.y};
+  };
+  const must = EXAM_MUST.map(id => DATES.find(d => d.id === id)).filter(Boolean);
+  const rest = shuffle(DATES.filter(d => !d.per && d.y && !EXAM_MUST.includes(d.id) && d.id !== "pd10")); // « Fin de la Terreur » donnerait la réponse de « La Terreur »
+  const dates = shuffle(must.concat(rest.slice(0, EXAM_DATES - must.length))).map(asItem);
+  const pers = EXAM_PER.map(id => DATES.find(d => d.id === id)).filter(Boolean).map(c => Object.assign(asItem(c), {per: true}));
+  const red = DEFS.filter(d => d.cours), defsSrc = red.length ? red : shuffle(DEFS).slice(0, 5);
+  const defs = shuffle(defsSrc).map(c => Object.assign(makeQ(Object.assign({ty:"def"}, c)), {kind:"qcm"}));
+  const regs = shuffle(REGS).slice(0, EXAM_REGS).map(c => Object.assign(makeQ(Object.assign({ty:"car"}, c)), {kind:"qcm"}));
+  // dans l'ordre : dates, périodes des régimes, définitions, caractéristiques
+  E = {list: dates.concat(pers, defs, regs), i: 0, answers: {}, t0: Date.now(), xp0: S.xp};
+  view = "exam"; renderExam();
+  clearInterval(examTick);
+  examTick = setInterval(() => { const el = $("#chrono"); if (el) el.textContent = mmss(Date.now() - E.t0); else clearInterval(examTick); }, 1000);
+}
+const mmss = ms => { const s = Math.floor(ms / 1000); return String(Math.floor(s / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0"); };
+function renderExam(){
+  const it = E.list[E.i], c = it.c, th = THEMES[c.t], a = E.answers[E.i];
+  const last = E.i + 1 === E.list.length;
+  let body;
+  if (it.kind === "year") {
+    body = `<div class="face fade-in" style="--c:${th.color};min-height:0">
+      <div class="fhead"><span class="ftag">Interrogation · ${esc(tagOf(c))}</span><span class="fbox">écrivez l'année</span></div>
+      <div class="ruled" style="padding-block:14px"><span class="qk" style="--kc:var(--k-dat)">${ico("cal",15)} ${it.until ? "Jusqu'en quelle année ?" : "En quelle année ?"}</span><div class="q qsmall">${esc(c.e)}</div></div></div>
+      <div class="yearbox"><input class="yearin" id="yin" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="17··" autocomplete="off" aria-label="Année" value="${a != null ? esc(a) : ""}"></div>`;
+  } else if (it.kind === "range") {
+    const v = a || {};
+    body = `<div class="face fade-in" style="--c:${th.color};min-height:0">
+      <div class="fhead"><span class="ftag">Interrogation · ${it.per ? "Période d'un régime" : "Période"}</span><span class="fbox">deux années</span></div>
+      <div class="ruled" style="padding-block:14px"><span class="qk" style="--kc:var(--k-dat)">${ico("cal",15)} ${it.per ? "Quelles sont les dates de ce régime ?" : "Quelles sont les dates de cette période ?"}</span><div class="q qsmall">${esc(c.e)}</div></div></div>
+      <div class="datebox">
+        <label><span>De</span><input class="yearin" id="rA" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="17··" autocomplete="off" value="${esc(v.a || "")}"></label>
+        <label><span>à</span><input class="yearin" id="rB" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="18··" autocomplete="off" value="${esc(v.b || "")}"></label>
+      </div>`;
+  } else if (it.kind === "full") {
+    const v = a || {};
+    body = `<div class="face fade-in" style="--c:${th.color};min-height:0">
+      <div class="fhead"><span class="ftag">Interrogation · ${esc(tagOf(c))}</span><span class="fbox">date complète</span></div>
+      <div class="ruled" style="padding-block:14px"><span class="qk" style="--kc:var(--k-dat)">${ico("cal",15)} Donnez la date complète : jour, mois, année</span><div class="q qsmall">${esc(c.e)}</div></div></div>
+      <div class="datebox">
+        <label><span>Jour</span><input class="yearin din" id="dJ" inputmode="numeric" pattern="[0-9]*" maxlength="2" placeholder="··" autocomplete="off" value="${esc(v.d || "")}"></label>
+        <label><span>Mois</span><select class="msel" id="dM"><option value="">choisir…</option>${MOIS.map((m, k) => `<option value="${k + 1}"${+v.m === k + 1 ? " selected" : ""}>${m}</option>`).join("")}</select></label>
+        <label><span>Année</span><input class="yearin" id="dA" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="17··" autocomplete="off" value="${esc(v.y || "")}"></label>
+      </div>`;
+  } else {
+    body = qHead(it, "Interrogation", "une seule bonne réponse") +
+      `<div class="qcm-opts">${it.opts.map((o, i) => `<button class="opt${a === i ? " chosen" : ""}" data-i="${i}" aria-pressed="${a === i}"><span class="l">${"ABCD"[i]}</span><span>${esc(o)}</span></button>`).join("")}</div>`;
+  }
+  const fullOk = v => !!v && /^\d{1,2}$/.test(v.d || "") && +v.d >= 1 && +v.d <= 31 && !!v.m && /^\d{4}$/.test(v.y || "");
+  const rangeOk = v => !!v && /^\d{4}$/.test(v.a || "") && /^\d{4}$/.test(v.b || "");
+  const filled = it.kind === "year" ? /^\d{4}$/.test(a || "") : it.kind === "full" ? fullOk(a) : it.kind === "range" ? rangeOk(a) : a != null;
+  app.innerHTML = `
+  <div class="sess-head">
+    <button class="ghost" id="quit" aria-label="Abandonner">${ico("back",16)}</button>
+    <div class="prog" aria-hidden="true"><i style="width:${pct(E.i / E.list.length)}%"></i></div>
+    <span class="sess-count">${E.i + 1}/${E.list.length}</span>
+    <span class="combo" id="chrono" title="Temps écoulé" style="font-family:var(--f-mono);font-size:15px">${mmss(Date.now() - E.t0)}</span>
+  </div>
+  ${body}
+  <div class="row" style="margin-top:14px">
+    ${E.i > 0 ? `<button class="go alt" id="prev">${ico("back",18)} Précédente</button>` : ""}
+    <button class="go" id="next" ${filled ? "" : "disabled"}>${last ? "Terminer et voir ma note" : "Question suivante"} ${ico("arrow",18)}</button>
+  </div>
+  <div id="quitBox"></div>`;
+  const next = () => { if (E.i + 1 < E.list.length) { E.i++; renderExam(); } else endExam(); };
+  if (it.kind === "year") {
+    const yin = $("#yin");
+    yin.oninput = () => { yin.value = yin.value.replace(/\D/g, "").slice(0, 4); E.answers[E.i] = yin.value; $("#next").disabled = !/^\d{4}$/.test(yin.value); };
+    yin.onkeydown = e => { if (e.key === "Enter" && /^\d{4}$/.test(yin.value)) next(); };
+    if (matchMedia("(pointer: fine)").matches) yin.focus();
+  } else if (it.kind === "range") {
+    const v = E.answers[E.i] || (E.answers[E.i] = {}), rA = $("#rA"), rB = $("#rB");
+    const upd = () => { v.a = rA.value = rA.value.replace(/\D/g, "").slice(0, 4); v.b = rB.value = rB.value.replace(/\D/g, "").slice(0, 4); $("#next").disabled = !rangeOk(v); };
+    rA.oninput = () => { upd(); if (rA.value.length === 4) rB.focus(); };
+    rB.oninput = upd;
+    rB.onkeydown = e => { if (e.key === "Enter" && rangeOk(v)) next(); };
+    if (matchMedia("(pointer: fine)").matches) rA.focus();
+  } else if (it.kind === "full") {
+    const v = E.answers[E.i] || (E.answers[E.i] = {}), dJ = $("#dJ"), dM = $("#dM"), dA = $("#dA");
+    const upd = () => { v.d = dJ.value = dJ.value.replace(/\D/g, "").slice(0, 2); v.m = dM.value; v.y = dA.value = dA.value.replace(/\D/g, "").slice(0, 4); $("#next").disabled = !fullOk(v); };
+    dJ.oninput = () => { upd(); if (dJ.value.length === 2) dM.focus(); };
+    dM.onchange = () => { upd(); dA.focus(); };
+    dA.oninput = upd;
+    dA.onkeydown = e => { if (e.key === "Enter" && fullOk(v)) next(); };
+    if (matchMedia("(pointer: fine)").matches) dJ.focus();
+  } else {
+    app.querySelectorAll(".opt").forEach(b => b.onclick = () => { E.answers[E.i] = +b.dataset.i; renderExam(); });
+  }
+  $("#next").onclick = next;
+  const pv = $("#prev"); if (pv) pv.onclick = () => { E.i--; renderExam(); };
+  $("#quit").onclick = () => {
+    $("#quitBox").innerHTML = `<div class="confirm-box" style="margin-top:14px"><span>Abandonner l'interrogation ? Vos réponses ne seront pas comptées.</span><button class="danger" id="qYes">Abandonner</button><button class="ghost" id="qNo">Continuer</button></div>`;
+    $("#qYes").onclick = () => { clearInterval(examTick); home(); };
+    $("#qNo").onclick = () => { $("#quitBox").innerHTML = ""; };
+  };
+  window.scrollTo(0, 0);
+}
+function endExam(){
+  clearInterval(examTick);
+  view = "end";
+  const dur = Date.now() - E.t0;
+  let ok = 0, okD = 0, okW = 0, okR = 0, okP = 0;
+  E.list.forEach((it, i) => {
+    if (it.kind === "year") { it.mine = E.answers[i] || "aucune"; it.good = +E.answers[i] === it.yy; it.pts = it.good ? 1 : 0; if (it.per) okP += it.pts; else okD += it.pts; }
+    else if (it.kind === "range") {
+      const v = E.answers[i] || {}; it.mine = v.a ? v.a + "-" + v.b : "aucune";
+      const n = (+v.a === it.rg[0] ? 1 : 0) + (+v.b === it.rg[1] ? 1 : 0);
+      it.good = n === 2; it.pts = n / 2; if (n === 1) it.halfR = true;
+      if (it.per) okP += it.pts; else okD += it.pts;
+    }
+    else if (it.kind === "full") {
+      const v = E.answers[i] || {}, f = it.fd;
+      it.mine = v.d ? v.d + " " + MOIS[+v.m - 1] + " " + v.y : "aucune";
+      it.good = f.days.includes(+v.d) && +v.m === f.mo && +v.y === f.y;
+      it.pts = it.good ? 1 : (+v.y === f.y ? .5 : 0); okD += it.pts;
+      if (it.pts === .5) it.half = true;
+    }
+    else { it.mine = it.opts[E.answers[i]]; it.good = it.mine === it.good; it.pts = it.good ? 1 : 0; if (it.good) { if (it.c.ty === "car") okR++; else okW++; } }
+    ok += it.pts;
+    grade(it.c.id, it.good);
+  });
+  const note = Math.round(ok / E.list.length * 40) / 2;
+  addXP(ok * 8 + (note >= 16 ? 30 : 0));
+  track("session-interrogation"); report("Interrogation blanche");
+  S.examBest = Math.max(S.examBest || 0, note); save(); checkBadges();
+  const wrong = E.list.filter(it => !it.good);
+  const msg = note >= 16 ? "Excellent, vous êtes prêt !" : note >= 12 ? "Bien, encore un petit effort" : note >= 8 ? "Des bases, mais il faut réviser" : "À retravailler avant l'interrogation";
+  const nP = E.list.filter(it => it.per).length, nD = E.list.filter(it => (it.kind === "year" || it.kind === "full" || it.kind === "range") && !it.per).length, nR = E.list.filter(it => it.c.ty === "car").length, nW = E.list.length - nD - nR - nP;
+  app.innerHTML = `
+  <div class="endcard fade-in">
+    <div><span class="ftag" style="color:var(--accent)">Interrogation blanche · ${mmss(dur)}</span>
+      <h2 class="note20">${String(note).replace(".", ",")}<small>/20</small></h2><p class="muted" style="margin:6px 0 0;font-size:15px">${msg} · ${String(ok).replace(".", ",")} point${ok > 1 ? "s" : ""} sur ${E.list.length}</p></div>
+    <div class="tbars">
+      <div class="tbar" style="--c:var(--k-dat)"><span>Dates repères</span><div class="mbar"><i style="width:${pct(okD / (nD || 1))}%"></i></div><b>${String(okD).replace(".", ",")}/${nD}</b></div>
+      <div class="tbar" style="--c:var(--c-pol)"><span>Périodes des régimes</span><div class="mbar"><i style="width:${pct(okP / (nP || 1))}%"></i></div><b>${String(okP).replace(".", ",")}/${nP}</b></div>
+      <div class="tbar" style="--c:var(--k-def)"><span>Définitions</span><div class="mbar"><i style="width:${pct(okW / (nW || 1))}%"></i></div><b>${okW}/${nW}</b></div>
+      <div class="tbar" style="--c:var(--c-eur)"><span>Régimes</span><div class="mbar"><i style="width:${pct(okR / (nR || 1))}%"></i></div><b>${okR}/${nR}</b></div>
+    </div>
+    ${wrong.length ? `<div><h3 class="h3s">Corrigé de vos erreurs</h3>
+      <div class="miss">${wrong.map(it => { const c = it.c, th = THEMES[c.t]; return `<details style="--c:${th.color}" open><summary><span class="ftag">${esc(tagOf(c))}</span>${esc(cardLine(c))}</summary><p class="muted">Votre réponse : ${esc(it.mine || "aucune")}${it.half ? " (année juste : ½ point)" : it.halfR ? " (une année juste : ½ point)" : ""}</p><p><b>Bonne réponse : ${esc(cardAns(c))}</b></p>${c.d ? `<div style="margin-top:4px">${c.d}</div>` : ""}</details>`; }).join("")}</div>
+      <p class="muted" style="font-size:14px;margin:10px 0 0">Ces cartes reviendront demain dans « Cartes à revoir aujourd'hui ».</p></div>` : ""}
+    <div class="row">
+      ${wrong.length ? `<button class="go" id="again">${ico("flip",18)} Retravailler mes erreurs maintenant</button>` : ""}
+      <button class="go alt" id="more">Nouvelle interrogation</button>
+      <button class="go alt" id="back">Accueil</button>
+    </div>
+  </div>`;
+  if (wrong.length) $("#again").onclick = () => startFlip(shuffle(wrong.map(it => it.c.id)));
+  $("#more").onclick = startExam;
+  $("#back").onclick = home;
+  if (note >= 16) confetti();
+  window.scrollTo(0, 0);
+}
+
+/* =========================================================
+   BADGES, BILAN ET LISTE DES CARTES
+   ========================================================= */
+function badgesView(){ view = "badges"; confirmReset = false; renderBadges(); }
+function renderBadges(){
+  const lv = level(), g = mastery(CARDS);
+  const bar = (label, color, m, bold) => `<div class="tbar" style="--c:${color}${bold ? ";font-weight:700" : ""}"><span>${esc(label)}</span><div class="mbar"><i style="width:${pct(m)}%"></i></div><b>${pct(m)}%</b></div>`;
+  app.innerHTML = `
+  <div class="sess-head"><button class="ghost" id="quit">${ico("back",16)} Accueil</button></div>
+  <section class="bilan fade-in">
+    ${g >= .7 ? `<span class="stamp">Prêt !</span>` : ""}
+    <span class="ftag" style="color:var(--accent)">Bilan de révision · H3</span>
+    <h2>Mon bilan</h2>
+    <div class="muted" style="font-size:14.5px">Niveau ${lv.n}/${LEVELS.length} · ${esc(lv.name)} · ${S.xp} XP · ${S.reviewed} cartes révisées · ${Object.keys(S.badges).length}/${BADGES.length} badges${S.examBest ? " · meilleure interrogation blanche : " + String(S.examBest).replace(".", ",") + "/20" : ""}</div>
+    <div class="tbars">${bar("Tout le chapitre", "var(--ok)", g, true)}</div>
+    <h5 class="bh">Dates et définitions</h5>
+    <div class="tbars">${TY.map(k => bar(TYPES[k].label, TYPES[k].color, mastery(inType(k)))).join("")}</div>
+  </section>
+  <div class="sec-title"><h3>Badges</h3><span class="muted" style="font-size:14px">${Object.keys(S.badges).length} sur ${BADGES.length}</span></div>
+  <div class="badges-grid">
+    ${BADGES.map(b => { const has = !!S.badges[b.id]; return `<div class="bitem${has ? "" : " locked"}">${medal(b, !has)}<div><b>${esc(b.name)}</b><p>${esc(b.desc)}</p></div></div>`; }).join("")}
+  </div>
+  <div class="sec-title"><h3>Relire toutes les cartes</h3><button class="linkbtn" id="toList">Ouvrir la liste</button></div>
+  <div class="sec-title"><h3>Recommencer à zéro</h3></div>
+  <div class="confirm-box">
+    ${confirmReset ? `<span>Tout effacer (XP, badges, progression) ?</span><button class="danger" id="yes">Oui, tout effacer</button><button class="ghost" id="no">Annuler</button>`
+      : `<button class="danger" id="reset">Effacer ma progression</button>`}
+  </div>`;
+  $("#quit").onclick = home;
+  $("#toList").onclick = listView;
+  if (confirmReset) { $("#yes").onclick = () => { S = fresh(); save(); home(); }; $("#no").onclick = () => { confirmReset = false; renderBadges(); }; }
+  else $("#reset").onclick = () => { confirmReset = true; renderBadges(); };
+  window.scrollTo(0, 0);
+}
+function listView(){
+  view = "list";
+  app.innerHTML = `<div class="sess-head"><button class="ghost" id="quit">${ico("back",16)} Bilan</button></div>
+  <div class="sec-title" style="margin-top:0"><h3>Toutes les cartes</h3><span class="muted" style="font-size:14px">${CARDS.length} cartes</span></div>
+  ${TH.map(t => `<div class="sec-title"><h3 style="color:${THEMES[t].color};font-size:21px">${esc(THEMES[t].label)}</h3></div>
+    <h4 class="listh">Dates repères</h4>
+    <div class="timeline">${DATES.filter(d => d.t === t).sort((a, b) => a.key < b.key ? -1 : 1).map(d => `<div class="tl" style="--c:${THEMES[t].color}"><b>${esc(d.w)}</b>${esc(d.e)}</div>`).join("")}</div>
+    <h4 class="listh">Définitions</h4>
+    <div class="miss">${DEFS.filter(c => c.t === t).map(c => `<details style="--c:${THEMES[t].color}"><summary>${esc(c.w)}</summary><p>${esc(c.a)}</p>${c.d ? `<p class="muted">${c.d}</p>` : ""}</details>`).join("")}</div>
+    <h4 class="listh">Caractéristiques des régimes</h4>
+    <div class="miss">${REGS.map(c => `<details style="--c:var(--c-eur)"><summary>${esc(c.w)} <span class="yrsb">(${esc(c.yrs)})</span></summary><ul style="margin:6px 0 0;padding-left:20px">${c.c.map(x => `<li>${esc(x)}</li>`).join("")}</ul>${c.d ? `<p class="muted">${c.d}</p>` : ""}</details>`).join("")}</div>`).join("")}`;
+  $("#quit").onclick = badgesView;
+  window.scrollTo(0, 0);
+}
+
+/* ---------- Clavier ---------- */
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT") return;
+  if (view === "flip") {
+    if (e.key === " " || e.key === "Enter") { e.preventDefault(); doFlip(); }
+    if (e.key === "ArrowRight") { e.preventDefault(); fly(true); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); fly(false); }
+  }
+});
+
+home();
+reportVisit();
+})();
+</script>
+<!-- Compteur de visites anonyme (GoatCounter, sans cookies) -->
+<script data-goatcounter="https://jeannehg.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
